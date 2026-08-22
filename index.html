@@ -92,13 +92,13 @@
 
     .dita-tools-line{ font-family:var(--font-mono); font-size:.8rem; color:var(--muted); margin:26px 0 0; }
 
-    .dita-outputs{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin:16px 0 4px; }
+    .dita-outputs{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:16px 0 4px; }
     .dita-output-link{ display:flex; align-items:flex-start; gap:12px; text-decoration:none; border:1px solid var(--line); border-radius:10px; padding:16px 18px; background:#fff; transition:border-color .15s, transform .15s; }
     .dita-output-link:hover{ border-color:var(--blue); transform:translateY(-2px); }
     .dita-output-link .oico{ font-family:var(--font-mono); font-size:.68rem; font-weight:700; color:#fff; background:var(--blue); border-radius:5px; padding:5px 7px; letter-spacing:.03em; flex-shrink:0; }
     .dita-output-link .otext strong{ display:block; font-size:.92rem; color:var(--ink); margin-bottom:3px; }
     .dita-output-link .otext span{ font-size:.8rem; color:var(--muted); }
-    @media (max-width:640px){ .dita-outputs{ grid-template-columns:1fr; } }
+    @media (max-width:900px){ .dita-outputs{ grid-template-columns:1fr; } }
 
     .dita-source{ margin-top:30px; }
     .dita-source summary{ cursor:pointer; list-style:none; font-family:var(--font-mono); font-size:.82rem; color:var(--blue); font-weight:500; padding:12px 0; border-top:1px solid var(--line); display:flex; align-items:center; gap:8px; }
@@ -325,6 +325,7 @@
       <div class="dita-outputs">
         <a class="dita-output-link" href="obs-guide/index.html" target="_blank" rel="noopener"><span class="oico">HTML</span><span class="otext"><strong>View the published output ↗</strong><span>Built from the same source with the DITA Open Toolkit — real navigation, real cross-references.</span></span></a>
         <a class="dita-output-link" href="obs-guide-quickstart.pdf" target="_blank" rel="noopener"><span class="oico">PDF</span><span class="otext"><strong>Download the PDF manual ↗</strong><span>Same source, single-sourced to a 12-page print-ready guide, no rewriting.</span></span></a>
+        <a class="dita-output-link" href="obs-guide-windows-edition.pdf" target="_blank" rel="noopener"><span class="oico">PDF</span><span class="otext"><strong>Windows-only edition ↗</strong><span>Same exact source, filtered at build time with a <code>.ditaval</code> file — no macOS content, nothing hand-edited.</span></span></a>
       </div>
 
       <div class="dita-sub-label">Information architecture</div>
@@ -361,9 +362,11 @@
       <div class="dita-sub-label">Reuse in practice</div>
       <div class="dita-tech">
         <div class="dita-tech-item"><span class="tname">Content reuse — <code>conref</code></span><p>The install topic's caution note is pulled in from a shared file instead of retyped — update it once, it updates everywhere it's referenced.</p></div>
-        <div class="dita-tech-item"><span class="tname">Conditional filtering — <code>platform</code></span><p>Windows and macOS install steps live in the same task topic, filtered by a platform attribute, so one topic serves both operating systems.</p></div>
+        <div class="dita-tech-item"><span class="tname">Inline conditions — <code>platform</code></span><p>Windows and macOS install steps live in the same task topic, filtered by a platform attribute, so one topic serves both operating systems.</p></div>
         <div class="dita-tech-item"><span class="tname">Key-based referencing — <code>keyref</code></span><p>The product name is inserted via a key definition throughout every topic — rename the product once, and it updates across the whole guide.</p></div>
         <div class="dita-tech-item"><span class="tname">Topic typing</span><p>Each topic follows DITA's built-in types — task, concept, reference, glossentry — so structure and formatting stay consistent without manual styling.</p></div>
+        <div class="dita-tech-item"><span class="tname">Managed relationships — reltable</span><p>Related-links on every topic page are generated from a relationship table in the map, not hand-written cross-references — restructure the map and the links update themselves.</p></div>
+        <div class="dita-tech-item"><span class="tname">Build-time filtering — <code>.ditaval</code></span><p>A separate Windows-only edition is produced from the exact same source files using a filter file — no branching content, no duplicate topics to maintain.</p></div>
       </div>
 
       <p class="dita-tools-line">Authored in oXygen XML Editor · built with the DITA Open Toolkit (DITA-OT)</p>
@@ -375,6 +378,7 @@
           <button class="dita-tab active" data-pane="dita-pane-map" role="tab">obs-guide.bookmap</button>
           <button class="dita-tab" data-pane="dita-pane-task" role="tab">task-install.dita</button>
           <button class="dita-tab" data-pane="dita-pane-ref" role="tab">reference-output-settings.dita</button>
+          <button class="dita-tab" data-pane="dita-pane-val" role="tab">windows-edition.ditaval</button>
         </div>
         <div class="dita-pane active" id="dita-pane-map"><pre><span class="xd">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
 <span class="xd">&lt;!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd"&gt;</span>
@@ -429,6 +433,34 @@
     <span class="xt">&lt;/glossarylist</span>&gt;
     <span class="xt">&lt;/booklists</span>&gt;
   <span class="xt">&lt;/backmatter</span>&gt;
+
+  <span class="xt">&lt;reltable</span>&gt;
+    <span class="xt">&lt;relheader</span>&gt;
+      <span class="xt">&lt;relcolspec</span> <span class="xa">type</span>=<span class="xs">"concept"</span>/&gt;
+      <span class="xt">&lt;relcolspec</span> <span class="xa">type</span>=<span class="xs">"task"</span>/&gt;
+      <span class="xt">&lt;relcolspec</span> <span class="xa">type</span>=<span class="xs">"reference"</span>/&gt;
+    <span class="xt">&lt;/relheader</span>&gt;
+    <span class="xt">&lt;relrow</span>&gt;
+      <span class="xt">&lt;relcell</span>&gt;
+        <span class="xt">&lt;topicref</span> <span class="xa">href</span>=<span class="xs">"topics/concept-scenes-sources.dita"</span>/&gt;
+      <span class="xt">&lt;/relcell</span>&gt;
+      <span class="xt">&lt;relcell</span>&gt;
+        <span class="xt">&lt;topicref</span> <span class="xa">href</span>=<span class="xs">"topics/task-install.dita"</span>/&gt;
+        <span class="xt">&lt;topicref</span> <span class="xa">href</span>=<span class="xs">"topics/task-create-scene.dita"</span>/&gt;
+      <span class="xt">&lt;/relcell</span>&gt;
+      <span class="xt">&lt;relcell</span>/&gt;
+    <span class="xt">&lt;/relrow</span>&gt;
+    <span class="xt">&lt;relrow</span>&gt;
+      <span class="xt">&lt;relcell</span>/&gt;
+      <span class="xt">&lt;relcell</span>&gt;
+        <span class="xt">&lt;topicref</span> <span class="xa">href</span>=<span class="xs">"topics/task-record-video.dita"</span>/&gt;
+      <span class="xt">&lt;/relcell</span>&gt;
+      <span class="xt">&lt;relcell</span>&gt;
+        <span class="xt">&lt;topicref</span> <span class="xa">href</span>=<span class="xs">"topics/reference-output-settings.dita"</span>/&gt;
+        <span class="xt">&lt;topicref</span> <span class="xa">href</span>=<span class="xs">"topics/reference-troubleshooting.dita"</span>/&gt;
+      <span class="xt">&lt;/relcell</span>&gt;
+    <span class="xt">&lt;/relrow</span>&gt;
+  <span class="xt">&lt;/reltable</span>&gt;
 <span class="xt">&lt;/bookmap</span>&gt;
 </pre></div>
         <div class="dita-pane" id="dita-pane-task"><pre><span class="xd">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
@@ -439,7 +471,8 @@
     macOS.<span class="xt">&lt;/shortdesc</span>&gt;
   <span class="xt">&lt;taskbody</span>&gt;
     <span class="xt">&lt;context</span>&gt;
-      <span class="xt">&lt;p</span>&gt;The installation steps differ slightly by operating system.<span class="xt">&lt;/p</span>&gt;
+      <span class="xt">&lt;p</span>&gt;The installation steps differ slightly by operating
+        system.<span class="xt">&lt;indexterm</span>&gt;installation<span class="xt">&lt;indexterm</span>&gt;Windows<span class="xt">&lt;/indexterm</span>&gt;<span class="xt">&lt;/indexterm</span>&gt;<span class="xt">&lt;indexterm</span>&gt;installation<span class="xt">&lt;indexterm</span>&gt;macOS<span class="xt">&lt;/indexterm</span>&gt;<span class="xt">&lt;/indexterm</span>&gt;<span class="xt">&lt;/p</span>&gt;
     <span class="xt">&lt;/context</span>&gt;
     <span class="xt">&lt;steps</span>&gt;
       <span class="xt">&lt;step</span>&gt;
@@ -478,6 +511,8 @@
   <span class="xt">&lt;refbody</span>&gt;
     <span class="xt">&lt;section</span>&gt;
       <span class="xt">&lt;title</span>&gt;Recording settings<span class="xt">&lt;/title</span>&gt;
+      <span class="xt">&lt;p</span>&gt;Reference values for the most commonly adjusted encoder and output
+        settings.<span class="xt">&lt;indexterm</span>&gt;encoder<span class="xt">&lt;indexterm</span>&gt;selecting<span class="xt">&lt;/indexterm</span>&gt;<span class="xt">&lt;/indexterm</span>&gt;<span class="xt">&lt;indexterm</span>&gt;bitrate<span class="xt">&lt;/indexterm</span>&gt;<span class="xt">&lt;indexterm</span>&gt;recording format<span class="xt">&lt;indexterm</span>&gt;mkv<span class="xt">&lt;/indexterm</span>&gt;<span class="xt">&lt;/indexterm</span>&gt;<span class="xt">&lt;/p</span>&gt;
       <span class="xt">&lt;simpletable</span> <span class="xa">relcolwidth</span>=<span class="xs">"1* 1* 3*"</span> <span class="xa">keycol</span>=<span class="xs">"1"</span>&gt;
         <span class="xt">&lt;sthead</span>&gt;
           <span class="xt">&lt;stentry</span>&gt;Setting<span class="xt">&lt;/stentry</span>&gt;
@@ -523,7 +558,13 @@
   <span class="xt">&lt;/refbody</span>&gt;
 <span class="xt">&lt;/reference</span>&gt;
 </pre></div>
-        <div class="dita-caption">Map organizes chapters, frontmatter, and a glossary list; the task topic reuses shared content via <code>conref</code> and filters steps by <code>platform</code>; the reference topic renders a structured settings table with <code>simpletable</code>.</div>
+        <div class="dita-pane" id="dita-pane-val"><pre><span class="xd">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="xt">&lt;val</span>&gt;
+  <span class="xt">&lt;prop</span> <span class="xa">att</span>=<span class="xs">"platform"</span> <span class="xa">val</span>=<span class="xs">"mac"</span> <span class="xa">action</span>=<span class="xs">"exclude"</span>/&gt;
+  <span class="xt">&lt;prop</span> <span class="xa">att</span>=<span class="xs">"platform"</span> <span class="xa">val</span>=<span class="xs">"windows"</span> <span class="xa">action</span>=<span class="xs">"include"</span>/&gt;
+<span class="xt">&lt;/val</span>&gt;
+</pre></div>
+        <div class="dita-caption">Map organizes chapters, frontmatter, a glossary list, and a <code>reltable</code> that drives related-links automatically; the task topic reuses shared content via <code>conref</code> and filters steps by <code>platform</code>; the ditaval file builds a platform-specific edition without touching the source.</div>
         </div>
       </details>
     </div></section>
