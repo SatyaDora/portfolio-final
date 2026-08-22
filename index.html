@@ -48,64 +48,38 @@
     .doc-note-label{ font-family:var(--font-mono); font-size:.68rem; text-transform:uppercase; letter-spacing:.1em; color:var(--editor-amber); font-weight:600; margin-right:8px; }
     @media (max-width:720px){ .doc-lines{ display:none; } .doc-content{ padding:26px 20px 30px; } .doc-titlebar{ font-size:.68rem; padding:10px 14px; } }
 
-    .dita-window{ background:var(--editor-bg); border:1px solid #2a2f34; border-radius:10px; overflow:hidden; box-shadow:0 24px 50px -30px rgba(0,0,0,.45); margin-top:26px; }
-    .dita-tabs{ display:flex; flex-wrap:wrap; gap:2px; background:var(--editor-panel); border-bottom:1px solid var(--editor-line); padding:0 6px; }
-    .dita-tab{ appearance:none; border:none; background:transparent; color:var(--editor-muted); font-family:var(--font-mono); font-size:.76rem; padding:12px 14px; cursor:pointer; border-bottom:2px solid transparent; }
-    .dita-tab:hover{ color:var(--editor-ink); }
-    .dita-tab.active{ color:var(--editor-ink); border-bottom-color:var(--editor-teal); }
-    .dita-pane{ display:none; }
-    .dita-pane.active{ display:block; }
-    .dita-pane pre{ margin:0; padding:24px 26px; font-family:var(--font-mono); font-size:.78rem; line-height:1.7; color:var(--editor-ink); overflow-x:auto; white-space:pre; }
-    .dita-pane .xt{ color:var(--editor-teal); }
-    .dita-pane .xa{ color:var(--editor-amber); }
-    .dita-pane .xs{ color:#9fb4ff; }
-    .dita-pane .xd{ color:var(--editor-muted); }
-    .dita-pane .xc{ color:var(--editor-muted); font-style:italic; }
-    .dita-caption{ font-family:var(--font-mono); font-size:.74rem; color:var(--editor-muted); padding:12px 26px 16px; border-top:1px dashed var(--editor-line); }
-    @media (max-width:640px){ .dita-pane pre{ padding:18px 16px; font-size:.72rem; } .dita-tab{ padding:10px 11px; font-size:.7rem; } }
+    .dita-links-line{ font-family:var(--font-mono); font-size:.82rem; color:var(--blue); margin:18px 0 28px; }
+    .dita-links-line a{ color:var(--blue); text-decoration:none; border-bottom:1px solid rgba(15,125,108,.35); }
+    .dita-links-line a:hover{ border-bottom-color:var(--blue); }
+    .dita-links-line .sep{ color:var(--muted); margin:0 10px; }
 
-    .dita-case{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin:28px 0 6px; }
-    .dita-case-item{ border-left:2px solid var(--blue); padding:4px 0 4px 16px; }
-    .dita-case-item .label{ font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; color:var(--blue); font-weight:600; display:block; margin-bottom:8px; }
-    .dita-case-item p{ font-size:.92rem; line-height:1.6; color:var(--ink); margin:0; }
-    @media (max-width:820px){ .dita-case{ grid-template-columns:1fr; gap:20px; } }
+    .ide-panel{ background:var(--editor-bg); border:1px solid #2a2f34; border-radius:10px; overflow:hidden; box-shadow:0 24px 50px -30px rgba(0,0,0,.45); }
+    .ide-titlebar{ display:flex; align-items:center; gap:14px; padding:12px 18px; background:var(--editor-panel); border-bottom:1px solid var(--editor-line); font-family:var(--font-mono); font-size:.75rem; color:var(--editor-muted); }
+    .ide-titlebar .idots{ display:flex; gap:6px; }
+    .ide-titlebar .idots i{ display:block; width:9px; height:9px; border-radius:50%; background:#3a4046; }
+    .ide-titlebar .ifile{ color:var(--editor-ink); font-weight:500; }
+    .ide-body{ display:grid; grid-template-columns:230px 1fr; min-height:420px; }
+    .ide-sidebar{ background:rgba(255,255,255,.02); border-right:1px solid var(--editor-line); padding:14px 0; overflow-y:auto; font-family:var(--font-mono); font-size:.76rem; }
+    .ide-sidebar ul{ list-style:none; margin:0; padding-left:16px; }
+    .ide-sidebar > ul{ padding-left:0; }
+    .ide-node{ color:var(--editor-muted); padding:5px 14px; }
+    .ide-file{ display:flex; align-items:center; justify-content:space-between; gap:6px; width:100%; text-align:left; appearance:none; border:none; background:transparent; color:var(--editor-muted); font-family:var(--font-mono); font-size:.76rem; padding:5px 14px; cursor:pointer; border-radius:0; }
+    .ide-file:hover{ color:var(--editor-ink); background:rgba(255,255,255,.04); }
+    .ide-file.active{ color:var(--editor-teal); background:rgba(63,217,184,.08); }
+    .ide-file .itag{ font-size:.62rem; color:var(--editor-gutter); flex-shrink:0; }
+    .ide-code{ overflow:auto; }
+    .ide-pane{ display:none; }
+    .ide-pane.active{ display:block; }
+    .ide-pane pre{ margin:0; padding:22px 26px; font-family:var(--font-mono); font-size:.78rem; line-height:1.7; color:var(--editor-ink); overflow-x:auto; white-space:pre; }
+    .ide-pane .xt{ color:var(--editor-teal); }
+    .ide-pane .xa{ color:var(--editor-amber); }
+    .ide-pane .xs{ color:#9fb4ff; }
+    .ide-pane .xd{ color:var(--editor-muted); }
+    .ide-pane .xc{ color:var(--editor-muted); font-style:italic; }
+    .ide-caption{ font-family:var(--font-mono); font-size:.74rem; color:var(--editor-muted); padding:12px 26px 16px; border-top:1px dashed var(--editor-line); }
+    @media (max-width:760px){ .ide-body{ grid-template-columns:1fr; } .ide-sidebar{ border-right:none; border-bottom:1px solid var(--editor-line); max-height:180px; } .ide-pane pre{ padding:18px 16px; font-size:.72rem; } }
 
-    .dita-sub-label{ font-family:var(--font-mono); font-size:.78rem; color:var(--blue); margin:34px 0 14px; }
-    .dita-sub-label::before{ content:"// "; opacity:.5; }
-
-    .ia-tree, .ia-tree ul{ list-style:none; margin:0; padding-left:22px; }
-    .ia-tree{ padding-left:0; font-family:var(--font-mono); font-size:.82rem; }
-    .ia-tree li{ position:relative; padding:5px 0 5px 20px; border-left:1px solid var(--line); }
-    .ia-tree li:last-child{ border-left-color:transparent; }
-    .ia-tree li::before{ content:""; position:absolute; left:0; top:16px; width:16px; height:1px; background:var(--line); }
-    .ia-tree > li{ border-left:none; padding-left:0; font-weight:600; }
-    .ia-tree > li::before{ display:none; }
-    .ia-tag{ font-size:.68rem; color:var(--muted); border:1px solid var(--line); border-radius:3px; padding:1px 6px; margin-left:8px; }
-    .ia-wrap{ border:1px solid var(--line); border-radius:10px; padding:22px 24px; background:#fff; }
-
-    .dita-tech{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
-    .dita-tech-item{ border:1px solid var(--line); border-radius:10px; padding:16px 18px; background:#fff; }
-    .dita-tech-item .tname{ font-family:var(--font-mono); font-size:.8rem; color:var(--blue); font-weight:600; }
-    .dita-tech-item .tname code{ font-family:var(--font-mono); font-size:.78rem; background:rgba(15,125,108,.08); padding:1px 5px; border-radius:3px; }
-    .dita-tech-item p{ font-size:.86rem; line-height:1.55; color:var(--muted); margin:8px 0 0; }
-    @media (max-width:820px){ .dita-tech{ grid-template-columns:1fr; } }
-
-    .dita-tools-line{ font-family:var(--font-mono); font-size:.8rem; color:var(--muted); margin:26px 0 0; }
-
-    .dita-outputs{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:16px 0 4px; }
-    .dita-output-link{ display:flex; align-items:flex-start; gap:12px; text-decoration:none; border:1px solid var(--line); border-radius:10px; padding:16px 18px; background:#fff; transition:border-color .15s, transform .15s; }
-    .dita-output-link:hover{ border-color:var(--blue); transform:translateY(-2px); }
-    .dita-output-link .oico{ font-family:var(--font-mono); font-size:.68rem; font-weight:700; color:#fff; background:var(--blue); border-radius:5px; padding:5px 7px; letter-spacing:.03em; flex-shrink:0; }
-    .dita-output-link .otext strong{ display:block; font-size:.92rem; color:var(--ink); margin-bottom:3px; }
-    .dita-output-link .otext span{ font-size:.8rem; color:var(--muted); }
-    @media (max-width:900px){ .dita-outputs{ grid-template-columns:1fr; } }
-
-    .dita-source{ margin-top:30px; }
-    .dita-source summary{ cursor:pointer; list-style:none; font-family:var(--font-mono); font-size:.82rem; color:var(--blue); font-weight:500; padding:12px 0; border-top:1px solid var(--line); display:flex; align-items:center; gap:8px; }
-    .dita-source summary::-webkit-details-marker{ display:none; }
-    .dita-source summary::before{ content:"▸"; display:inline-block; transition:transform .15s; font-size:.7em; }
-    .dita-source[open] summary::before{ transform:rotate(90deg); }
-    .dita-source .dita-window{ margin-top:16px; }
+    .dita-tools-line{ font-family:var(--font-mono); font-size:.8rem; color:var(--muted); margin:18px 0 0; }
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; }
     body { margin:0; background:var(--paper); color:var(--ink); font-family:"DM Sans",sans-serif; line-height:1.6; }
@@ -313,74 +287,47 @@
 
       <p style="color:var(--muted); font-size:var(--fs-base); max-width:640px; margin-top:26px;">This isn't a one-time cleanup — it's a standing gate. Every push runs the same check in GitHub Actions, so editorial quality doesn't depend on someone catching it by eye.</p>
     </div></section>
-    <section id="dita"><div class="wrap">
-      <div class="section-title"><div class="eyebrow">Structured authoring</div><div><h2>DITA XML — one source, reused everywhere.</h2><p>A sample end-user guide built the way enterprise docs teams actually work: typed topics, a bookmap for structure, and OASIS-standard reuse mechanisms in place of copy-paste.</p></div></div>
+        <section id="dita"><div class="wrap">
+      <div class="section-title"><div class="eyebrow">Structured authoring</div><div><h2>DITA XML — one source, reused everywhere.</h2><p>Flat, duplicated documentation gets expensive to maintain — the same warning, the same product name, and near-identical install steps drift out of sync the moment something changes. This sample handles that with typed topics, a bookmap, and DITA's own reuse mechanisms: a shared caution note pulled in with <code>conref</code>, the product name resolved everywhere via <code>keyref</code>, related-links generated from a <code>reltable</code> instead of written by hand, and a Windows-only edition built from the identical source using a <code>.ditaval</code> filter — no duplicated content, no branched files.</p></div></div>
 
-      <div class="dita-case">
-        <div class="dita-case-item"><span class="label">Challenge</span><p>Flat, duplicated documentation is expensive to maintain — the same caution note, product name, and near-identical install steps end up copy-pasted across files and drift out of sync every time something changes.</p></div>
-        <div class="dita-case-item"><span class="label">Approach</span><p>Built a small DITA project — a bookmap, typed topics (task, concept, reference, glossary), and standard reuse mechanisms — so shared content lives in one place and gets pulled in wherever it's needed.</p></div>
-        <div class="dita-case-item"><span class="label">Outcome</span><p>One set of topics that can publish to a PDF manual, an HTML help center, or a knowledge base with zero duplicated content and consistent terminology — the pattern enterprise teams use to scale documentation.</p></div>
-      </div>
+      <p class="dita-links-line"><a href="obs-guide/index.html" target="_blank" rel="noopener">View the published HTML ↗</a><span class="sep">·</span><a href="obs-guide-quickstart.pdf" target="_blank" rel="noopener">Download the PDF manual ↗</a><span class="sep">·</span><a href="obs-guide-windows-edition.pdf" target="_blank" rel="noopener">Windows-only edition ↗</a></p>
 
-      <div class="dita-outputs">
-        <a class="dita-output-link" href="obs-guide/index.html" target="_blank" rel="noopener"><span class="oico">HTML</span><span class="otext"><strong>View the published output ↗</strong><span>Built from the same source with the DITA Open Toolkit — real navigation, real cross-references.</span></span></a>
-        <a class="dita-output-link" href="obs-guide-quickstart.pdf" target="_blank" rel="noopener"><span class="oico">PDF</span><span class="otext"><strong>Download the PDF manual ↗</strong><span>Same source, single-sourced to a 12-page print-ready guide, no rewriting.</span></span></a>
-        <a class="dita-output-link" href="obs-guide-windows-edition.pdf" target="_blank" rel="noopener"><span class="oico">PDF</span><span class="otext"><strong>Windows-only edition ↗</strong><span>Same exact source, filtered at build time with a <code>.ditaval</code> file — no macOS content, nothing hand-edited.</span></span></a>
-      </div>
-
-      <div class="dita-sub-label">Information architecture</div>
-      <div class="ia-wrap">
-        <ul class="ia-tree">
-          <li>OBS Studio Quick Start <span class="ia-tag">bookmap</span>
+      <div class="ide-panel">
+        <div class="ide-titlebar"><span class="idots"><i></i><i></i><i></i></span><span class="ifile">obs-guide/</span></div>
+        <div class="ide-body">
+          <div class="ide-sidebar">
+          <ul>
+          <li><button class="ide-file active" data-pane="ide-pane-map">obs-guide.bookmap<span class="itag">map</span></button>
             <ul>
-              <li>Preface <span class="ia-tag">frontmatter</span></li>
-              <li>Getting Started <span class="ia-tag">concept</span>
+              <li><button class="ide-file" data-pane="ide-pane-preface">preface.dita<span class="itag">frontmatter</span></button></li>
+              <li><div class="ide-node">Getting Started <span class="itag">concept</span></div>
                 <ul>
-                  <li>Installing OBS Studio <span class="ia-tag">task</span></li>
-                  <li>Creating Your First Scene <span class="ia-tag">task</span></li>
+                  <li><button class="ide-file" data-pane="ide-pane-concept">concept-scenes-sources.dita<span class="itag">concept</span></button></li>
+                  <li><button class="ide-file" data-pane="ide-pane-task-install">task-install.dita<span class="itag">task</span></button></li>
+                  <li><button class="ide-file" data-pane="ide-pane-task-create">task-create-scene.dita<span class="itag">task</span></button></li>
                 </ul>
               </li>
-              <li>Recording <span class="ia-tag">chapter</span>
+              <li><div class="ide-node">Recording <span class="itag">chapter</span></div>
                 <ul>
-                  <li>Recording a Video <span class="ia-tag">task</span></li>
-                  <li>Output Settings Reference <span class="ia-tag">reference</span></li>
-                  <li>Common Recording Issues <span class="ia-tag">reference</span></li>
+                  <li><button class="ide-file" data-pane="ide-pane-task-record">task-record-video.dita<span class="itag">task</span></button></li>
+                  <li><button class="ide-file" data-pane="ide-pane-ref-output">reference-output-settings.dita<span class="itag">reference</span></button></li>
+                  <li><button class="ide-file" data-pane="ide-pane-ref-trouble">reference-troubleshooting.dita<span class="itag">reference</span></button></li>
                 </ul>
               </li>
-              <li>Glossary <span class="ia-tag">backmatter</span>
+              <li><div class="ide-node">Glossary <span class="itag">backmatter</span></div>
                 <ul>
-                  <li>Scene <span class="ia-tag">glossentry</span></li>
-                  <li>Source <span class="ia-tag">glossentry</span></li>
-                  <li>Encoder <span class="ia-tag">glossentry</span></li>
+                  <li><button class="ide-file" data-pane="ide-pane-gloss-scene">glossentry-scene.dita<span class="itag">term</span></button></li>
+                  <li><button class="ide-file" data-pane="ide-pane-gloss-source">glossentry-source.dita<span class="itag">term</span></button></li>
+                  <li><button class="ide-file" data-pane="ide-pane-gloss-encoder">glossentry-encoder.dita<span class="itag">term</span></button></li>
                 </ul>
               </li>
+              <li><button class="ide-file" data-pane="ide-pane-val">windows-edition.ditaval<span class="itag">filter</span></button></li>
             </ul>
           </li>
         </ul>
-      </div>
-
-      <div class="dita-sub-label">Reuse in practice</div>
-      <div class="dita-tech">
-        <div class="dita-tech-item"><span class="tname">Content reuse — <code>conref</code></span><p>The install topic's caution note is pulled in from a shared file instead of retyped — update it once, it updates everywhere it's referenced.</p></div>
-        <div class="dita-tech-item"><span class="tname">Inline conditions — <code>platform</code></span><p>Windows and macOS install steps live in the same task topic, filtered by a platform attribute, so one topic serves both operating systems.</p></div>
-        <div class="dita-tech-item"><span class="tname">Key-based referencing — <code>keyref</code></span><p>The product name is inserted via a key definition throughout every topic — rename the product once, and it updates across the whole guide.</p></div>
-        <div class="dita-tech-item"><span class="tname">Topic typing</span><p>Each topic follows DITA's built-in types — task, concept, reference, glossentry — so structure and formatting stay consistent without manual styling.</p></div>
-        <div class="dita-tech-item"><span class="tname">Managed relationships — reltable</span><p>Related-links on every topic page are generated from a relationship table in the map, not hand-written cross-references — restructure the map and the links update themselves.</p></div>
-        <div class="dita-tech-item"><span class="tname">Build-time filtering — <code>.ditaval</code></span><p>A separate Windows-only edition is produced from the exact same source files using a filter file — no branching content, no duplicate topics to maintain.</p></div>
-      </div>
-
-      <p class="dita-tools-line">Authored in oXygen XML Editor · built with the DITA Open Toolkit (DITA-OT)</p>
-
-      <details class="dita-source">
-        <summary>View the DITA source</summary>
-        <div class="dita-window">
-        <div class="dita-tabs" role="tablist">
-          <button class="dita-tab active" data-pane="dita-pane-map" role="tab">obs-guide.bookmap</button>
-          <button class="dita-tab" data-pane="dita-pane-task" role="tab">task-install.dita</button>
-          <button class="dita-tab" data-pane="dita-pane-ref" role="tab">reference-output-settings.dita</button>
-          <button class="dita-tab" data-pane="dita-pane-val" role="tab">windows-edition.ditaval</button>
-        </div>
-        <div class="dita-pane active" id="dita-pane-map"><pre><span class="xd">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+          </div>
+          <div class="ide-code">
+        <div class="ide-pane active" id="ide-pane-map"><pre><span class="xd">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
 <span class="xd">&lt;!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd"&gt;</span>
 <span class="xt">&lt;bookmap</span> <span class="xa">id</span>=<span class="xs">"obs-guide-bookmap"</span>&gt;
   <span class="xt">&lt;booktitle</span>&gt;
@@ -463,7 +410,56 @@
   <span class="xt">&lt;/reltable</span>&gt;
 <span class="xt">&lt;/bookmap</span>&gt;
 </pre></div>
-        <div class="dita-pane" id="dita-pane-task"><pre><span class="xd">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+        <div class="ide-pane" id="ide-pane-val"><pre><span class="xd">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="xt">&lt;val</span>&gt;
+  <span class="xt">&lt;prop</span> <span class="xa">att</span>=<span class="xs">"platform"</span> <span class="xa">val</span>=<span class="xs">"mac"</span> <span class="xa">action</span>=<span class="xs">"exclude"</span>/&gt;
+  <span class="xt">&lt;prop</span> <span class="xa">att</span>=<span class="xs">"platform"</span> <span class="xa">val</span>=<span class="xs">"windows"</span> <span class="xa">action</span>=<span class="xs">"include"</span>/&gt;
+<span class="xt">&lt;/val</span>&gt;
+</pre></div>
+        <div class="ide-pane" id="ide-pane-preface"><pre><span class="xd">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="xd">&lt;!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd"&gt;</span>
+<span class="xt">&lt;topic</span> <span class="xa">id</span>=<span class="xs">"preface"</span>&gt;
+  <span class="xt">&lt;title</span>&gt;About This Guide<span class="xt">&lt;/title</span>&gt;
+  <span class="xt">&lt;body</span>&gt;
+    <span class="xt">&lt;p</span>&gt;This guide covers installing <span class="xt">&lt;ph</span> <span class="xa">keyref</span>=<span class="xs">"product-name"</span>/&gt;, building your first
+      scene, and recording a video, plus reference material on output settings and
+      common issues.<span class="xt">&lt;/p</span>&gt;
+    <span class="xt">&lt;p</span> <span class="xa">conref</span>=<span class="xs">"../reuse/shared-content.dita#shared-content/oss-notice"</span>/&gt;
+  <span class="xt">&lt;/body</span>&gt;
+<span class="xt">&lt;/topic</span>&gt;
+</pre></div>
+        <div class="ide-pane" id="ide-pane-concept"><pre><span class="xd">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="xd">&lt;!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd"&gt;</span>
+<span class="xt">&lt;concept</span> <span class="xa">id</span>=<span class="xs">"concept-scenes-sources"</span>&gt;
+  <span class="xt">&lt;title</span>&gt;Scenes and Sources<span class="xt">&lt;/title</span>&gt;
+  <span class="xt">&lt;shortdesc</span>&gt;Everything you record or stream in <span class="xt">&lt;ph</span> <span class="xa">keyref</span>=<span class="xs">"product-name"</span>/&gt; is built
+    from scenes and sources.<span class="xt">&lt;/shortdesc</span>&gt;
+  <span class="xt">&lt;conbody</span>&gt;
+    <span class="xt">&lt;p</span>&gt;A <span class="xt">&lt;term</span>&gt;scene<span class="xt">&lt;/term</span>&gt; is a layout you switch to as a single unit &amp;#8212; for
+      example, a "Starting Soon" scene, a "Gameplay" scene, and a "Webcam Only"
+      scene. Each scene is made up of one or more <span class="xt">&lt;term</span>&gt;sources<span class="xt">&lt;/term</span>&gt;: individual
+      inputs such as a display capture, a webcam, a microphone, an image, or a
+      browser page.<span class="xt">&lt;/p</span>&gt;
+    <span class="xt">&lt;fig</span>&gt;
+      <span class="xt">&lt;title</span>&gt;Scene and source relationship<span class="xt">&lt;/title</span>&gt;
+      <span class="xt">&lt;image</span> <span class="xa">href</span>=<span class="xs">"../images/scene-source-model.svg"</span> <span class="xa">placement</span>=<span class="xs">"break"</span>&gt;
+        <span class="xt">&lt;alt</span>&gt;Diagram showing a Scene containing three Sources: Display Capture,
+          Webcam, and Microphone.<span class="xt">&lt;/alt</span>&gt;
+      <span class="xt">&lt;/image</span>&gt;
+    <span class="xt">&lt;/fig</span>&gt;
+    <span class="xt">&lt;p</span>&gt;You can reuse the same source across multiple scenes, resize and reposition
+      sources independently within a scene, and switch between scenes instantly while
+      recording or streaming &amp;#8212; this is what makes multi-camera or
+      multi-layout setups possible without stopping the recording.<span class="xt">&lt;/p</span>&gt;
+    <span class="xt">&lt;p</span>&gt;Before building your first scene, see
+      <span class="xt">&lt;xref</span> <span class="xa">href</span>=<span class="xs">"task-install.dita"</span> <span class="xa">format</span>=<span class="xs">"dita"</span>&gt;Installing <span class="xt">&lt;ph</span>
+      <span class="xa">keyref</span>=<span class="xs">"product-name"</span>/&gt;<span class="xt">&lt;/xref</span>&gt;. Once installed, see
+      <span class="xt">&lt;xref</span> <span class="xa">href</span>=<span class="xs">"task-create-scene.dita"</span> <span class="xa">format</span>=<span class="xs">"dita"</span>&gt;Creating Your First
+      Scene<span class="xt">&lt;/xref</span>&gt;.<span class="xt">&lt;/p</span>&gt;
+  <span class="xt">&lt;/conbody</span>&gt;
+<span class="xt">&lt;/concept</span>&gt;
+</pre></div>
+        <div class="ide-pane" id="ide-pane-task-install"><pre><span class="xd">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
 <span class="xd">&lt;!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd"&gt;</span>
 <span class="xt">&lt;task</span> <span class="xa">id</span>=<span class="xs">"task-install"</span>&gt;
   <span class="xt">&lt;title</span>&gt;Installing <span class="xt">&lt;ph</span> <span class="xa">keyref</span>=<span class="xs">"product-name"</span>/&gt;<span class="xt">&lt;/title</span>&gt;
@@ -501,7 +497,104 @@
   <span class="xt">&lt;/taskbody</span>&gt;
 <span class="xt">&lt;/task</span>&gt;
 </pre></div>
-        <div class="dita-pane" id="dita-pane-ref"><pre><span class="xd">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+        <div class="ide-pane" id="ide-pane-task-create"><pre><span class="xd">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="xd">&lt;!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd"&gt;</span>
+<span class="xt">&lt;task</span> <span class="xa">id</span>=<span class="xs">"task-create-scene"</span>&gt;
+  <span class="xt">&lt;title</span>&gt;Creating Your First Scene<span class="xt">&lt;/title</span>&gt;
+  <span class="xt">&lt;shortdesc</span>&gt;Build a scene with a display capture and a webcam.<span class="xt">&lt;/shortdesc</span>&gt;
+  <span class="xt">&lt;taskbody</span>&gt;
+    <span class="xt">&lt;prereq</span>&gt;
+      <span class="xt">&lt;p</span>&gt;Requires <span class="xt">&lt;xref</span> <span class="xa">href</span>=<span class="xs">"task-install.dita"</span> <span class="xa">format</span>=<span class="xs">"dita"</span>&gt;<span class="xt">&lt;ph</span>
+        <span class="xa">keyref</span>=<span class="xs">"product-name"</span>/&gt;<span class="xt">&lt;/xref</span>&gt; to be installed and running.<span class="xt">&lt;/p</span>&gt;
+    <span class="xt">&lt;/prereq</span>&gt;
+    <span class="xt">&lt;steps</span>&gt;
+      <span class="xt">&lt;step</span>&gt;
+        <span class="xt">&lt;cmd</span>&gt;In the <span class="xt">&lt;uicontrol</span>&gt;Scenes<span class="xt">&lt;/uicontrol</span>&gt; panel, click the
+          <span class="xt">&lt;uicontrol</span>&gt;+<span class="xt">&lt;/uicontrol</span>&gt; button and name the scene, for example
+          <span class="xt">&lt;uicontrol</span>&gt;Gameplay<span class="xt">&lt;/uicontrol</span>&gt;.<span class="xt">&lt;/cmd</span>&gt;
+      <span class="xt">&lt;/step</span>&gt;
+      <span class="xt">&lt;step</span>&gt;
+        <span class="xt">&lt;cmd</span>&gt;In the <span class="xt">&lt;uicontrol</span>&gt;Sources<span class="xt">&lt;/uicontrol</span>&gt; panel, click
+          <span class="xt">&lt;uicontrol</span>&gt;+<span class="xt">&lt;/uicontrol</span>&gt; and choose <span class="xt">&lt;uicontrol</span>&gt;Display Capture<span class="xt">&lt;/uicontrol</span>&gt;
+          (Windows/macOS) to capture your full screen.<span class="xt">&lt;/cmd</span>&gt;
+        <span class="xt">&lt;stepresult</span>&gt;A live preview of your screen appears in the scene
+          canvas.<span class="xt">&lt;/stepresult</span>&gt;
+      <span class="xt">&lt;/step</span>&gt;
+      <span class="xt">&lt;step</span>&gt;
+        <span class="xt">&lt;cmd</span>&gt;Click <span class="xt">&lt;uicontrol</span>&gt;+<span class="xt">&lt;/uicontrol</span>&gt; again and choose <span class="xt">&lt;uicontrol</span>&gt;Video
+          Capture Device<span class="xt">&lt;/uicontrol</span>&gt; to add your webcam.<span class="xt">&lt;/cmd</span>&gt;
+        <span class="xt">&lt;info</span>&gt;Drag the corners of the webcam source in the preview canvas to resize
+          and reposition it, typically into a lower corner of the frame.<span class="xt">&lt;/info</span>&gt;
+      <span class="xt">&lt;/step</span>&gt;
+      <span class="xt">&lt;step</span>&gt;
+        <span class="xt">&lt;cmd</span>&gt;Click <span class="xt">&lt;uicontrol</span>&gt;+<span class="xt">&lt;/uicontrol</span>&gt; once more and choose <span class="xt">&lt;uicontrol</span>&gt;Audio
+          Input Capture<span class="xt">&lt;/uicontrol</span>&gt; to add your microphone.<span class="xt">&lt;/cmd</span>&gt;
+      <span class="xt">&lt;/step</span>&gt;
+      <span class="xt">&lt;step</span>&gt;
+        <span class="xt">&lt;cmd</span>&gt;Speak into your microphone and confirm the level meter in the
+          <span class="xt">&lt;uicontrol</span>&gt;Audio Mixer<span class="xt">&lt;/uicontrol</span>&gt; panel moves.<span class="xt">&lt;/cmd</span>&gt;
+        <span class="xt">&lt;stepresult</span>&gt;Green and yellow indicate a healthy level; the meter turning
+          red means the input is clipping and should be lowered.<span class="xt">&lt;/stepresult</span>&gt;
+      <span class="xt">&lt;/step</span>&gt;
+    <span class="xt">&lt;/steps</span>&gt;
+    <span class="xt">&lt;result</span>&gt;
+      <span class="xt">&lt;p</span>&gt;Your scene now has a display capture, a webcam, and a microphone, ready to
+        record or stream.<span class="xt">&lt;/p</span>&gt;
+    <span class="xt">&lt;/result</span>&gt;
+  <span class="xt">&lt;/taskbody</span>&gt;
+<span class="xt">&lt;/task</span>&gt;
+</pre></div>
+        <div class="ide-pane" id="ide-pane-task-record"><pre><span class="xd">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="xd">&lt;!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd"&gt;</span>
+<span class="xt">&lt;task</span> <span class="xa">id</span>=<span class="xs">"task-record-video"</span>&gt;
+  <span class="xt">&lt;title</span>&gt;Recording a Video<span class="xt">&lt;/title</span>&gt;
+  <span class="xt">&lt;shortdesc</span>&gt;Record your current scene to a local video file.<span class="xt">&lt;/shortdesc</span>&gt;
+  <span class="xt">&lt;taskbody</span>&gt;
+    <span class="xt">&lt;prereq</span>&gt;
+      <span class="xt">&lt;p</span>&gt;Requires a scene with at least one source. See
+        <span class="xt">&lt;xref</span> <span class="xa">href</span>=<span class="xs">"task-create-scene.dita"</span> <span class="xa">format</span>=<span class="xs">"dita"</span>&gt;Creating Your First
+        Scene<span class="xt">&lt;/xref</span>&gt;.<span class="xt">&lt;/p</span>&gt;
+    <span class="xt">&lt;/prereq</span>&gt;
+    <span class="xt">&lt;steps</span>&gt;
+      <span class="xt">&lt;step</span>&gt;
+        <span class="xt">&lt;cmd</span>&gt;Select the scene you want to record from the <span class="xt">&lt;uicontrol</span>&gt;Scenes<span class="xt">&lt;/uicontrol</span>&gt;
+          panel.<span class="xt">&lt;/cmd</span>&gt;
+      <span class="xt">&lt;/step</span>&gt;
+      <span class="xt">&lt;step</span>&gt;
+        <span class="xt">&lt;cmd</span>&gt;Check the <span class="xt">&lt;uicontrol</span>&gt;Output<span class="xt">&lt;/uicontrol</span>&gt; settings before your first
+          recording. See
+          <span class="xt">&lt;xref</span> <span class="xa">href</span>=<span class="xs">"reference-output-settings.dita"</span> <span class="xa">format</span>=<span class="xs">"dita"</span>&gt;Output
+          Settings Reference<span class="xt">&lt;/xref</span>&gt; for what each option controls.<span class="xt">&lt;/cmd</span>&gt;
+      <span class="xt">&lt;/step</span>&gt;
+      <span class="xt">&lt;step</span> <span class="xa">audience</span>=<span class="xs">"expert"</span>&gt;
+        <span class="xt">&lt;cmd</span>&gt;For archival-quality recordings, open
+          <span class="xt">&lt;menucascade</span>&gt;<span class="xt">&lt;uicontrol</span>&gt;Settings<span class="xt">&lt;/uicontrol</span>&gt;<span class="xt">&lt;uicontrol</span>&gt;Output<span class="xt">&lt;/uicontrol</span>&gt;
+          <span class="xt">&lt;/menucascade</span>&gt;, switch to <span class="xt">&lt;uicontrol</span>&gt;Advanced<span class="xt">&lt;/uicontrol</span>&gt; output mode, and
+          enable <span class="xt">&lt;uicontrol</span>&gt;two-pass encoding<span class="xt">&lt;/uicontrol</span>&gt; if your encoder supports
+          it.<span class="xt">&lt;/cmd</span>&gt;
+        <span class="xt">&lt;info</span>&gt;Two-pass encoding roughly doubles encoding time in exchange for more
+          consistent quality at a given file size; it is unnecessary for most
+          everyday recordings.<span class="xt">&lt;/info</span>&gt;
+      <span class="xt">&lt;/step</span>&gt;
+      <span class="xt">&lt;step</span>&gt;
+        <span class="xt">&lt;cmd</span>&gt;Click <span class="xt">&lt;uicontrol</span>&gt;Start Recording<span class="xt">&lt;/uicontrol</span>&gt; in the main
+          window.<span class="xt">&lt;/cmd</span>&gt;
+        <span class="xt">&lt;stepresult</span>&gt;A red recording indicator and elapsed-time counter appear at the
+          bottom of the window.<span class="xt">&lt;/stepresult</span>&gt;
+      <span class="xt">&lt;/step</span>&gt;
+      <span class="xt">&lt;step</span>&gt;
+        <span class="xt">&lt;cmd</span>&gt;When finished, click <span class="xt">&lt;uicontrol</span>&gt;Stop Recording<span class="xt">&lt;/uicontrol</span>&gt;.<span class="xt">&lt;/cmd</span>&gt;
+      <span class="xt">&lt;/step</span>&gt;
+    <span class="xt">&lt;/steps</span>&gt;
+    <span class="xt">&lt;result</span>&gt;
+      <span class="xt">&lt;p</span>&gt;The recording is saved to the folder configured in
+        <span class="xt">&lt;menucascade</span>&gt;<span class="xt">&lt;uicontrol</span>&gt;Settings<span class="xt">&lt;/uicontrol</span>&gt;<span class="xt">&lt;uicontrol</span>&gt;Output<span class="xt">&lt;/uicontrol</span>&gt;
+        <span class="xt">&lt;/menucascade</span>&gt;, using the format set there.<span class="xt">&lt;/p</span>&gt;
+    <span class="xt">&lt;/result</span>&gt;
+  <span class="xt">&lt;/taskbody</span>&gt;
+<span class="xt">&lt;/task</span>&gt;
+</pre></div>
+        <div class="ide-pane" id="ide-pane-ref-output"><pre><span class="xd">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
 <span class="xd">&lt;!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd"&gt;</span>
 <span class="xt">&lt;reference</span> <span class="xa">id</span>=<span class="xs">"reference-output-settings"</span>&gt;
   <span class="xt">&lt;title</span>&gt;Output Settings Reference<span class="xt">&lt;/title</span>&gt;
@@ -558,15 +651,70 @@
   <span class="xt">&lt;/refbody</span>&gt;
 <span class="xt">&lt;/reference</span>&gt;
 </pre></div>
-        <div class="dita-pane" id="dita-pane-val"><pre><span class="xd">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
-<span class="xt">&lt;val</span>&gt;
-  <span class="xt">&lt;prop</span> <span class="xa">att</span>=<span class="xs">"platform"</span> <span class="xa">val</span>=<span class="xs">"mac"</span> <span class="xa">action</span>=<span class="xs">"exclude"</span>/&gt;
-  <span class="xt">&lt;prop</span> <span class="xa">att</span>=<span class="xs">"platform"</span> <span class="xa">val</span>=<span class="xs">"windows"</span> <span class="xa">action</span>=<span class="xs">"include"</span>/&gt;
-<span class="xt">&lt;/val</span>&gt;
+        <div class="ide-pane" id="ide-pane-ref-trouble"><pre><span class="xd">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="xd">&lt;!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd"&gt;</span>
+<span class="xt">&lt;reference</span> <span class="xa">id</span>=<span class="xs">"reference-troubleshooting"</span>&gt;
+  <span class="xt">&lt;title</span>&gt;Common Recording Issues<span class="xt">&lt;/title</span>&gt;
+  <span class="xt">&lt;shortdesc</span>&gt;Solutions to problems you may see while recording or
+    streaming.<span class="xt">&lt;/shortdesc</span>&gt;
+  <span class="xt">&lt;refbody</span>&gt;
+    <span class="xt">&lt;section</span>&gt;
+      <span class="xt">&lt;title</span>&gt;Encoding Overloaded warning<span class="xt">&lt;/title</span>&gt;
+      <span class="xt">&lt;p</span>&gt;Your CPU cannot encode video fast enough, causing dropped
+        frames.<span class="xt">&lt;indexterm</span>&gt;troubleshooting<span class="xt">&lt;indexterm</span>&gt;dropped frames<span class="xt">&lt;/indexterm</span>&gt;<span class="xt">&lt;/indexterm</span>&gt; Lower the
+        output resolution or frame rate, switch to a faster x264 preset (for example,
+        from <span class="xt">&lt;codeph</span>&gt;medium<span class="xt">&lt;/codeph</span>&gt; to <span class="xt">&lt;codeph</span>&gt;veryfast<span class="xt">&lt;/codeph</span>&gt;), or switch to a
+        hardware encoder if available.<span class="xt">&lt;/p</span>&gt;
+    <span class="xt">&lt;/section</span>&gt;
+    <span class="xt">&lt;section</span>&gt;
+      <span class="xt">&lt;title</span>&gt;Source appears black<span class="xt">&lt;/title</span>&gt;
+      <span class="xt">&lt;p</span>&gt;Common with Display Capture and Game Capture
+        sources.<span class="xt">&lt;indexterm</span>&gt;troubleshooting<span class="xt">&lt;indexterm</span>&gt;black screen<span class="xt">&lt;/indexterm</span>&gt;<span class="xt">&lt;/indexterm</span>&gt; Confirm the source is
+        not hidden behind another window using exclusive full-screen mode, and check
+        that OBS has screen-recording permission in your operating system's privacy
+        settings.<span class="xt">&lt;/p</span>&gt;
+    <span class="xt">&lt;/section</span>&gt;
+    <span class="xt">&lt;section</span>&gt;
+      <span class="xt">&lt;title</span>&gt;Audio and video are out of sync<span class="xt">&lt;/title</span>&gt;
+      <span class="xt">&lt;p</span>&gt;Right-click the affected audio source in the Audio Mixer, choose
+        <span class="xt">&lt;uicontrol</span>&gt;Advanced Audio Properties<span class="xt">&lt;/uicontrol</span>&gt;, and adjust the
+        <span class="xt">&lt;uicontrol</span>&gt;Sync Offset<span class="xt">&lt;/uicontrol</span>&gt; in milliseconds until playback lines
+        up.<span class="xt">&lt;indexterm</span>&gt;troubleshooting<span class="xt">&lt;indexterm</span>&gt;audio sync<span class="xt">&lt;/indexterm</span>&gt;<span class="xt">&lt;/indexterm</span>&gt;<span class="xt">&lt;/p</span>&gt;
+    <span class="xt">&lt;/section</span>&gt;
+  <span class="xt">&lt;/refbody</span>&gt;
+<span class="xt">&lt;/reference</span>&gt;
 </pre></div>
-        <div class="dita-caption">Map organizes chapters, frontmatter, a glossary list, and a <code>reltable</code> that drives related-links automatically; the task topic reuses shared content via <code>conref</code> and filters steps by <code>platform</code>; the ditaval file builds a platform-specific edition without touching the source.</div>
+        <div class="ide-pane" id="ide-pane-gloss-scene"><pre><span class="xd">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="xd">&lt;!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossentry.dtd"&gt;</span>
+<span class="xt">&lt;glossentry</span> <span class="xa">id</span>=<span class="xs">"glossentry-scene"</span>&gt;
+  <span class="xt">&lt;glossterm</span>&gt;scene<span class="xt">&lt;/glossterm</span>&gt;
+  <span class="xt">&lt;glossdef</span>&gt;A named layout of one or more sources that can be switched to as a single
+    unit while recording or streaming.<span class="xt">&lt;/glossdef</span>&gt;
+<span class="xt">&lt;/glossentry</span>&gt;
+</pre></div>
+        <div class="ide-pane" id="ide-pane-gloss-source"><pre><span class="xd">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="xd">&lt;!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossentry.dtd"&gt;</span>
+<span class="xt">&lt;glossentry</span> <span class="xa">id</span>=<span class="xs">"glossentry-source"</span>&gt;
+  <span class="xt">&lt;glossterm</span>&gt;source<span class="xt">&lt;/glossterm</span>&gt;
+  <span class="xt">&lt;glossdef</span>&gt;A single input added to a scene, such as a display capture, webcam, image,
+    or audio input.<span class="xt">&lt;/glossdef</span>&gt;
+<span class="xt">&lt;/glossentry</span>&gt;
+</pre></div>
+        <div class="ide-pane" id="ide-pane-gloss-encoder"><pre><span class="xd">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="xd">&lt;!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossentry.dtd"&gt;</span>
+<span class="xt">&lt;glossentry</span> <span class="xa">id</span>=<span class="xs">"glossentry-encoder"</span>&gt;
+  <span class="xt">&lt;glossterm</span>&gt;encoder<span class="xt">&lt;/glossterm</span>&gt;
+  <span class="xt">&lt;glossdef</span>&gt;The software or hardware component that compresses raw video into a
+    format suitable for saving or streaming, such as x264 (software) or NVENC
+    (hardware).<span class="xt">&lt;/glossdef</span>&gt;
+<span class="xt">&lt;/glossentry</span>&gt;
+</pre></div>
+          </div>
         </div>
-      </details>
+        <div class="ide-caption">Click any file to view its source. The map's <code>reltable</code> drives the related-links on every topic page; <code>windows-edition.ditaval</code> is the filter used to build the Windows-only PDF above.</div>
+      </div>
+
+      <p class="dita-tools-line">Authored in oXygen XML Editor · built with the DITA Open Toolkit (DITA-OT)</p>
     </div></section>
 
     <section id="independent"><div class="wrap">
@@ -678,12 +826,12 @@
   })();
 
   (function(){
-    var tabs = document.querySelectorAll('.dita-tab');
+    var tabs = document.querySelectorAll('.ide-file');
     tabs.forEach(function(tab){
       tab.addEventListener('click', function(){
         var target = tab.getAttribute('data-pane');
-        document.querySelectorAll('.dita-tab').forEach(function(t){ t.classList.remove('active'); });
-        document.querySelectorAll('.dita-pane').forEach(function(p){ p.classList.remove('active'); });
+        document.querySelectorAll('.ide-file').forEach(function(t){ t.classList.remove('active'); });
+        document.querySelectorAll('.ide-pane').forEach(function(p){ p.classList.remove('active'); });
         tab.classList.add('active');
         document.getElementById(target).classList.add('active');
       });
