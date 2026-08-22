@@ -63,6 +63,41 @@
     .dita-pane .xc{ color:var(--editor-muted); font-style:italic; }
     .dita-caption{ font-family:var(--font-mono); font-size:.74rem; color:var(--editor-muted); padding:12px 26px 16px; border-top:1px dashed var(--editor-line); }
     @media (max-width:640px){ .dita-pane pre{ padding:18px 16px; font-size:.72rem; } .dita-tab{ padding:10px 11px; font-size:.7rem; } }
+
+    .dita-case{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin:28px 0 6px; }
+    .dita-case-item{ border-left:2px solid var(--blue); padding:4px 0 4px 16px; }
+    .dita-case-item .label{ font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; color:var(--blue); font-weight:600; display:block; margin-bottom:8px; }
+    .dita-case-item p{ font-size:.92rem; line-height:1.6; color:var(--ink); margin:0; }
+    @media (max-width:820px){ .dita-case{ grid-template-columns:1fr; gap:20px; } }
+
+    .dita-sub-label{ font-family:var(--font-mono); font-size:.78rem; color:var(--blue); margin:34px 0 14px; }
+    .dita-sub-label::before{ content:"// "; opacity:.5; }
+
+    .ia-tree, .ia-tree ul{ list-style:none; margin:0; padding-left:22px; }
+    .ia-tree{ padding-left:0; font-family:var(--font-mono); font-size:.82rem; }
+    .ia-tree li{ position:relative; padding:5px 0 5px 20px; border-left:1px solid var(--line); }
+    .ia-tree li:last-child{ border-left-color:transparent; }
+    .ia-tree li::before{ content:""; position:absolute; left:0; top:16px; width:16px; height:1px; background:var(--line); }
+    .ia-tree > li{ border-left:none; padding-left:0; font-weight:600; }
+    .ia-tree > li::before{ display:none; }
+    .ia-tag{ font-size:.68rem; color:var(--muted); border:1px solid var(--line); border-radius:3px; padding:1px 6px; margin-left:8px; }
+    .ia-wrap{ border:1px solid var(--line); border-radius:10px; padding:22px 24px; background:#fff; }
+
+    .dita-tech{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
+    .dita-tech-item{ border:1px solid var(--line); border-radius:10px; padding:16px 18px; background:#fff; }
+    .dita-tech-item .tname{ font-family:var(--font-mono); font-size:.8rem; color:var(--blue); font-weight:600; }
+    .dita-tech-item .tname code{ font-family:var(--font-mono); font-size:.78rem; background:rgba(15,125,108,.08); padding:1px 5px; border-radius:3px; }
+    .dita-tech-item p{ font-size:.86rem; line-height:1.55; color:var(--muted); margin:8px 0 0; }
+    @media (max-width:820px){ .dita-tech{ grid-template-columns:1fr; } }
+
+    .dita-tools-line{ font-family:var(--font-mono); font-size:.8rem; color:var(--muted); margin:26px 0 0; }
+
+    .dita-source{ margin-top:30px; }
+    .dita-source summary{ cursor:pointer; list-style:none; font-family:var(--font-mono); font-size:.82rem; color:var(--blue); font-weight:500; padding:12px 0; border-top:1px solid var(--line); display:flex; align-items:center; gap:8px; }
+    .dita-source summary::-webkit-details-marker{ display:none; }
+    .dita-source summary::before{ content:"▸"; display:inline-block; transition:transform .15s; font-size:.7em; }
+    .dita-source[open] summary::before{ transform:rotate(90deg); }
+    .dita-source .dita-window{ margin-top:16px; }
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; }
     body { margin:0; background:var(--paper); color:var(--ink); font-family:"DM Sans",sans-serif; line-height:1.6; }
@@ -271,9 +306,58 @@
       <p style="color:var(--muted); font-size:var(--fs-base); max-width:640px; margin-top:26px;">This isn't a one-time cleanup — it's a standing gate. Every push runs the same check in GitHub Actions, so editorial quality doesn't depend on someone catching it by eye.</p>
     </div></section>
     <section id="dita"><div class="wrap">
-      <div class="section-title"><div class="eyebrow">Structured authoring</div><div><h2>DITA XML — topic-based, reusable documentation.</h2><p>A sample documentation set built the way enterprise docs teams actually work: typed topics (task, reference, concept), a bookmap tying them into chapters, and reuse mechanisms — <code>keyref</code>, <code>conref</code>, and platform-filtered steps — instead of one long file.</p></div></div>
+      <div class="section-title"><div class="eyebrow">Structured authoring</div><div><h2>DITA XML — one source, reused everywhere.</h2><p>A sample end-user guide built the way enterprise docs teams actually work: typed topics, a bookmap for structure, and OASIS-standard reuse mechanisms in place of copy-paste.</p></div></div>
 
-      <div class="dita-window">
+      <div class="dita-case">
+        <div class="dita-case-item"><span class="label">Challenge</span><p>Flat, duplicated documentation is expensive to maintain — the same caution note, product name, and near-identical install steps end up copy-pasted across files and drift out of sync every time something changes.</p></div>
+        <div class="dita-case-item"><span class="label">Approach</span><p>Built a small DITA project — a bookmap, typed topics (task, concept, reference, glossary), and standard reuse mechanisms — so shared content lives in one place and gets pulled in wherever it's needed.</p></div>
+        <div class="dita-case-item"><span class="label">Outcome</span><p>One set of topics that can publish to a PDF manual, an HTML help center, or a knowledge base with zero duplicated content and consistent terminology — the pattern enterprise teams use to scale documentation.</p></div>
+      </div>
+
+      <div class="dita-sub-label">Information architecture</div>
+      <div class="ia-wrap">
+        <ul class="ia-tree">
+          <li>OBS Studio Quick Start <span class="ia-tag">bookmap</span>
+            <ul>
+              <li>Preface <span class="ia-tag">frontmatter</span></li>
+              <li>Getting Started <span class="ia-tag">concept</span>
+                <ul>
+                  <li>Installing OBS Studio <span class="ia-tag">task</span></li>
+                  <li>Creating Your First Scene <span class="ia-tag">task</span></li>
+                </ul>
+              </li>
+              <li>Recording <span class="ia-tag">chapter</span>
+                <ul>
+                  <li>Recording a Video <span class="ia-tag">task</span></li>
+                  <li>Output Settings Reference <span class="ia-tag">reference</span></li>
+                  <li>Common Recording Issues <span class="ia-tag">reference</span></li>
+                </ul>
+              </li>
+              <li>Glossary <span class="ia-tag">backmatter</span>
+                <ul>
+                  <li>Scene <span class="ia-tag">glossentry</span></li>
+                  <li>Source <span class="ia-tag">glossentry</span></li>
+                  <li>Encoder <span class="ia-tag">glossentry</span></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="dita-sub-label">Reuse in practice</div>
+      <div class="dita-tech">
+        <div class="dita-tech-item"><span class="tname">Content reuse — <code>conref</code></span><p>The install topic's caution note is pulled in from a shared file instead of retyped — update it once, it updates everywhere it's referenced.</p></div>
+        <div class="dita-tech-item"><span class="tname">Conditional filtering — <code>platform</code></span><p>Windows and macOS install steps live in the same task topic, filtered by a platform attribute, so one topic serves both operating systems.</p></div>
+        <div class="dita-tech-item"><span class="tname">Key-based referencing — <code>keyref</code></span><p>The product name is inserted via a key definition throughout every topic — rename the product once, and it updates across the whole guide.</p></div>
+        <div class="dita-tech-item"><span class="tname">Topic typing</span><p>Each topic follows DITA's built-in types — task, concept, reference, glossentry — so structure and formatting stay consistent without manual styling.</p></div>
+      </div>
+
+      <p class="dita-tools-line">Authored in oXygen XML Editor · built with the DITA Open Toolkit (DITA-OT)</p>
+
+      <details class="dita-source">
+        <summary>View the DITA source</summary>
+        <div class="dita-window">
         <div class="dita-tabs" role="tablist">
           <button class="dita-tab active" data-pane="dita-pane-map" role="tab">obs-guide.bookmap</button>
           <button class="dita-tab" data-pane="dita-pane-task" role="tab">task-install.dita</button>
@@ -427,7 +511,8 @@
 <span class="xt">&lt;/reference</span>&gt;
 </pre></div>
         <div class="dita-caption">Map organizes chapters, frontmatter, and a glossary list; the task topic reuses shared content via <code>conref</code> and filters steps by <code>platform</code>; the reference topic renders a structured settings table with <code>simpletable</code>.</div>
-      </div>
+        </div>
+      </details>
     </div></section>
 
     <section id="independent"><div class="wrap">
