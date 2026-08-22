@@ -1,0 +1,30 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2026"><meta name="generator" content="DITA-OT"><meta name="description" content="Solutions to problems you may see while recording or streaming."><title>Common Recording Issues</title><link rel="stylesheet" type="text/css" href="../commonltr.css"></head><body id="reference-troubleshooting"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">Common Recording Issues</h1>
+  
+  <div class="body refbody"><p class="shortdesc">Solutions to problems you may see while recording or
+    streaming.</p>
+    <section class="section"><h2 class="title sectiontitle">Encoding Overloaded warning</h2>
+      
+      <p class="p">Your CPU cannot encode video fast enough, causing dropped frames. Lower the
+        output resolution or frame rate, switch to a faster x264 preset (for example,
+        from <code class="ph codeph">medium</code> to <code class="ph codeph">veryfast</code>), or switch to a
+        hardware encoder if available.</p>
+    </section>
+    <section class="section"><h2 class="title sectiontitle">Source appears black</h2>
+      
+      <p class="p">Common with Display Capture and Game Capture sources. Confirm the source is
+        not hidden behind another window using exclusive full-screen mode, and check
+        that OBS has screen-recording permission in your operating system's privacy
+        settings.</p>
+    </section>
+    <section class="section"><h2 class="title sectiontitle">Audio and video are out of sync</h2>
+      
+      <p class="p">Right-click the affected audio source in the Audio Mixer, choose
+        <span class="ph uicontrol">Advanced Audio Properties</span>, and adjust the
+        <span class="ph uicontrol">Sync Offset</span> in milliseconds until playback lines
+        up.</p>
+    </section>
+  </div>
+</article></main></body></html>

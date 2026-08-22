@@ -92,6 +92,14 @@
 
     .dita-tools-line{ font-family:var(--font-mono); font-size:.8rem; color:var(--muted); margin:26px 0 0; }
 
+    .dita-outputs{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin:16px 0 4px; }
+    .dita-output-link{ display:flex; align-items:flex-start; gap:12px; text-decoration:none; border:1px solid var(--line); border-radius:10px; padding:16px 18px; background:#fff; transition:border-color .15s, transform .15s; }
+    .dita-output-link:hover{ border-color:var(--blue); transform:translateY(-2px); }
+    .dita-output-link .oico{ font-family:var(--font-mono); font-size:.68rem; font-weight:700; color:#fff; background:var(--blue); border-radius:5px; padding:5px 7px; letter-spacing:.03em; flex-shrink:0; }
+    .dita-output-link .otext strong{ display:block; font-size:.92rem; color:var(--ink); margin-bottom:3px; }
+    .dita-output-link .otext span{ font-size:.8rem; color:var(--muted); }
+    @media (max-width:640px){ .dita-outputs{ grid-template-columns:1fr; } }
+
     .dita-source{ margin-top:30px; }
     .dita-source summary{ cursor:pointer; list-style:none; font-family:var(--font-mono); font-size:.82rem; color:var(--blue); font-weight:500; padding:12px 0; border-top:1px solid var(--line); display:flex; align-items:center; gap:8px; }
     .dita-source summary::-webkit-details-marker{ display:none; }
@@ -312,6 +320,11 @@
         <div class="dita-case-item"><span class="label">Challenge</span><p>Flat, duplicated documentation is expensive to maintain — the same caution note, product name, and near-identical install steps end up copy-pasted across files and drift out of sync every time something changes.</p></div>
         <div class="dita-case-item"><span class="label">Approach</span><p>Built a small DITA project — a bookmap, typed topics (task, concept, reference, glossary), and standard reuse mechanisms — so shared content lives in one place and gets pulled in wherever it's needed.</p></div>
         <div class="dita-case-item"><span class="label">Outcome</span><p>One set of topics that can publish to a PDF manual, an HTML help center, or a knowledge base with zero duplicated content and consistent terminology — the pattern enterprise teams use to scale documentation.</p></div>
+      </div>
+
+      <div class="dita-outputs">
+        <a class="dita-output-link" href="obs-guide/index.html" target="_blank" rel="noopener"><span class="oico">HTML</span><span class="otext"><strong>View the published output ↗</strong><span>Built from the same source with the DITA Open Toolkit — real navigation, real cross-references.</span></span></a>
+        <a class="dita-output-link" href="obs-guide-quickstart.pdf" target="_blank" rel="noopener"><span class="oico">PDF</span><span class="otext"><strong>Download the PDF manual ↗</strong><span>Same source, single-sourced to a 12-page print-ready guide, no rewriting.</span></span></a>
       </div>
 
       <div class="dita-sub-label">Information architecture</div>
