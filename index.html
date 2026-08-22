@@ -47,6 +47,22 @@
     .doc-note{ font-family:"DM Sans",sans-serif; font-size:.86rem; line-height:1.6; color:var(--editor-muted); border-left:2px solid var(--editor-amber); padding:12px 16px; background:rgba(217,164,65,.06); border-radius:0 6px 6px 0; }
     .doc-note-label{ font-family:var(--font-mono); font-size:.68rem; text-transform:uppercase; letter-spacing:.1em; color:var(--editor-amber); font-weight:600; margin-right:8px; }
     @media (max-width:720px){ .doc-lines{ display:none; } .doc-content{ padding:26px 20px 30px; } .doc-titlebar{ font-size:.68rem; padding:10px 14px; } }
+
+    .dita-window{ background:var(--editor-bg); border:1px solid #2a2f34; border-radius:10px; overflow:hidden; box-shadow:0 24px 50px -30px rgba(0,0,0,.45); margin-top:26px; }
+    .dita-tabs{ display:flex; flex-wrap:wrap; gap:2px; background:var(--editor-panel); border-bottom:1px solid var(--editor-line); padding:0 6px; }
+    .dita-tab{ appearance:none; border:none; background:transparent; color:var(--editor-muted); font-family:var(--font-mono); font-size:.76rem; padding:12px 14px; cursor:pointer; border-bottom:2px solid transparent; }
+    .dita-tab:hover{ color:var(--editor-ink); }
+    .dita-tab.active{ color:var(--editor-ink); border-bottom-color:var(--editor-teal); }
+    .dita-pane{ display:none; }
+    .dita-pane.active{ display:block; }
+    .dita-pane pre{ margin:0; padding:24px 26px; font-family:var(--font-mono); font-size:.78rem; line-height:1.7; color:var(--editor-ink); overflow-x:auto; white-space:pre; }
+    .dita-pane .xt{ color:var(--editor-teal); }
+    .dita-pane .xa{ color:var(--editor-amber); }
+    .dita-pane .xs{ color:#9fb4ff; }
+    .dita-pane .xd{ color:var(--editor-muted); }
+    .dita-pane .xc{ color:var(--editor-muted); font-style:italic; }
+    .dita-caption{ font-family:var(--font-mono); font-size:.74rem; color:var(--editor-muted); padding:12px 26px 16px; border-top:1px dashed var(--editor-line); }
+    @media (max-width:640px){ .dita-pane pre{ padding:18px 16px; font-size:.72rem; } .dita-tab{ padding:10px 11px; font-size:.7rem; } }
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; }
     body { margin:0; background:var(--paper); color:var(--ink); font-family:"DM Sans",sans-serif; line-height:1.6; }
@@ -148,7 +164,7 @@
     <div class="wrap nav">
       <a class="brand" href="#top">Satya Dora<span>Technical Communicator · API Docs · Content Strategy</span></a>
       <nav aria-label="Primary navigation">
-        <a href="#work">Featured Work</a><a href="#technical">Technical Docs</a><a href="#vale">Editorial Tooling</a><a href="#enterprise">Enterprise Work</a><a href="#independent">Projects</a><a href="#capabilities">Capabilities</a><a href="#about">About</a><a href="#contact">Contact</a>
+        <a href="#work">Featured Work</a><a href="#technical">Technical Docs</a><a href="#vale">Editorial Tooling</a><a href="#dita">Structured Authoring</a><a href="#enterprise">Enterprise Work</a><a href="#independent">Projects</a><a href="#capabilities">Capabilities</a><a href="#about">About</a><a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
@@ -254,6 +270,166 @@
 
       <p style="color:var(--muted); font-size:var(--fs-base); max-width:640px; margin-top:26px;">This isn't a one-time cleanup — it's a standing gate. Every push runs the same check in GitHub Actions, so editorial quality doesn't depend on someone catching it by eye.</p>
     </div></section>
+    <section id="dita"><div class="wrap">
+      <div class="section-title"><div class="eyebrow">Structured authoring</div><div><h2>DITA XML — topic-based, reusable documentation.</h2><p>A sample documentation set built the way enterprise docs teams actually work: typed topics (task, reference, concept), a bookmap tying them into chapters, and reuse mechanisms — <code>keyref</code>, <code>conref</code>, and platform-filtered steps — instead of one long file.</p></div></div>
+
+      <div class="dita-window">
+        <div class="dita-tabs" role="tablist">
+          <button class="dita-tab active" data-pane="dita-pane-map" role="tab">obs-guide.bookmap</button>
+          <button class="dita-tab" data-pane="dita-pane-task" role="tab">task-install.dita</button>
+          <button class="dita-tab" data-pane="dita-pane-ref" role="tab">reference-output-settings.dita</button>
+        </div>
+        <div class="dita-pane active" id="dita-pane-map"><pre><span class="xd">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="xd">&lt;!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd"&gt;</span>
+<span class="xt">&lt;bookmap</span> <span class="xa">id</span>=<span class="xs">"obs-guide-bookmap"</span>&gt;
+  <span class="xt">&lt;booktitle</span>&gt;
+    <span class="xt">&lt;mainbooktitle</span>&gt;OBS Studio Quick Start<span class="xt">&lt;/mainbooktitle</span>&gt;
+    <span class="xt">&lt;booktitlealt</span>&gt;Recording Your First Video<span class="xt">&lt;/booktitlealt</span>&gt;
+  <span class="xt">&lt;/booktitle</span>&gt;
+  <span class="xt">&lt;bookmeta</span>&gt;
+    <span class="xt">&lt;author</span>&gt;Documentation Sample<span class="xt">&lt;/author</span>&gt;
+    <span class="xt">&lt;bookrights</span>&gt;
+      <span class="xt">&lt;copyrfirst</span>&gt;
+        <span class="xt">&lt;year</span>&gt;2026<span class="xt">&lt;/year</span>&gt;
+      <span class="xt">&lt;/copyrfirst</span>&gt;
+      <span class="xt">&lt;bookowner</span>&gt;
+        <span class="xt">&lt;person</span>&gt;Sample Author<span class="xt">&lt;/person</span>&gt;
+      <span class="xt">&lt;/bookowner</span>&gt;
+    <span class="xt">&lt;/bookrights</span>&gt;
+  <span class="xt">&lt;/bookmeta</span>&gt;
+
+  <span class="xt">&lt;frontmatter</span>&gt;
+    <span class="xt">&lt;preface</span> <span class="xa">href</span>=<span class="xs">"topics/preface.dita"</span>/&gt;
+    <span class="xt">&lt;keydef</span> <span class="xa">keys</span>=<span class="xs">"product-name"</span>&gt;
+      <span class="xt">&lt;topicmeta</span>&gt;
+        <span class="xt">&lt;keywords</span>&gt;
+          <span class="xt">&lt;keyword</span>&gt;OBS Studio<span class="xt">&lt;/keyword</span>&gt;
+        <span class="xt">&lt;/keywords</span>&gt;
+      <span class="xt">&lt;/topicmeta</span>&gt;
+    <span class="xt">&lt;/keydef</span>&gt;
+  <span class="xt">&lt;/frontmatter</span>&gt;
+
+  <span class="xt">&lt;chapter</span> <span class="xa">href</span>=<span class="xs">"topics/concept-scenes-sources.dita"</span> <span class="xa">navtitle</span>=<span class="xs">"Getting Started"</span>&gt;
+    <span class="xt">&lt;topicref</span> <span class="xa">href</span>=<span class="xs">"topics/task-install.dita"</span> <span class="xa">navtitle</span>=<span class="xs">"Installing OBS Studio"</span>/&gt;
+    <span class="xt">&lt;topicref</span> <span class="xa">href</span>=<span class="xs">"topics/task-create-scene.dita"</span>
+      <span class="xa">navtitle</span>=<span class="xs">"Creating Your First Scene"</span>/&gt;
+  <span class="xt">&lt;/chapter</span>&gt;
+
+  <span class="xt">&lt;chapter</span> <span class="xa">navtitle</span>=<span class="xs">"Recording"</span>&gt;
+    <span class="xt">&lt;topicref</span> <span class="xa">href</span>=<span class="xs">"topics/task-record-video.dita"</span> <span class="xa">navtitle</span>=<span class="xs">"Recording a Video"</span>/&gt;
+    <span class="xt">&lt;topicref</span> <span class="xa">href</span>=<span class="xs">"topics/reference-output-settings.dita"</span>
+      <span class="xa">navtitle</span>=<span class="xs">"Output Settings Reference"</span>/&gt;
+    <span class="xt">&lt;topicref</span> <span class="xa">href</span>=<span class="xs">"topics/reference-troubleshooting.dita"</span>
+      <span class="xa">navtitle</span>=<span class="xs">"Common Recording Issues"</span>/&gt;
+  <span class="xt">&lt;/chapter</span>&gt;
+
+  <span class="xt">&lt;backmatter</span>&gt;
+    <span class="xt">&lt;booklists</span>&gt; 
+    <span class="xt">&lt;glossarylist</span>&gt;
+      <span class="xt">&lt;topicref</span> <span class="xa">href</span>=<span class="xs">"topics/glossentry-scene.dita"</span>/&gt;
+      <span class="xt">&lt;topicref</span> <span class="xa">href</span>=<span class="xs">"topics/glossentry-source.dita"</span>/&gt;
+      <span class="xt">&lt;topicref</span> <span class="xa">href</span>=<span class="xs">"topics/glossentry-encoder.dita"</span>/&gt;
+    <span class="xt">&lt;/glossarylist</span>&gt;
+    <span class="xt">&lt;/booklists</span>&gt;
+  <span class="xt">&lt;/backmatter</span>&gt;
+<span class="xt">&lt;/bookmap</span>&gt;
+</pre></div>
+        <div class="dita-pane" id="dita-pane-task"><pre><span class="xd">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="xd">&lt;!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd"&gt;</span>
+<span class="xt">&lt;task</span> <span class="xa">id</span>=<span class="xs">"task-install"</span>&gt;
+  <span class="xt">&lt;title</span>&gt;Installing <span class="xt">&lt;ph</span> <span class="xa">keyref</span>=<span class="xs">"product-name"</span>/&gt;<span class="xt">&lt;/title</span>&gt;
+  <span class="xt">&lt;shortdesc</span>&gt;Download and install <span class="xt">&lt;ph</span> <span class="xa">keyref</span>=<span class="xs">"product-name"</span>/&gt; on Windows or
+    macOS.<span class="xt">&lt;/shortdesc</span>&gt;
+  <span class="xt">&lt;taskbody</span>&gt;
+    <span class="xt">&lt;context</span>&gt;
+      <span class="xt">&lt;p</span>&gt;The installation steps differ slightly by operating system.<span class="xt">&lt;/p</span>&gt;
+    <span class="xt">&lt;/context</span>&gt;
+    <span class="xt">&lt;steps</span>&gt;
+      <span class="xt">&lt;step</span>&gt;
+        <span class="xt">&lt;cmd</span>&gt;Go to <span class="xt">&lt;systemoutput</span>&gt;obsproject.com/download<span class="xt">&lt;/systemoutput</span>&gt; and download
+          the installer for your operating system.<span class="xt">&lt;/cmd</span>&gt;
+      <span class="xt">&lt;/step</span>&gt;
+      <span class="xt">&lt;step</span> <span class="xa">platform</span>=<span class="xs">"windows"</span>&gt;
+        <span class="xt">&lt;cmd</span>&gt;Run the downloaded <span class="xt">&lt;filepath</span>&gt;.exe<span class="xt">&lt;/filepath</span>&gt; installer and follow the
+          setup wizard, accepting the default options.<span class="xt">&lt;/cmd</span>&gt;
+      <span class="xt">&lt;/step</span>&gt;
+      <span class="xt">&lt;step</span> <span class="xa">platform</span>=<span class="xs">"mac"</span>&gt;
+        <span class="xt">&lt;cmd</span>&gt;Open the downloaded <span class="xt">&lt;filepath</span>&gt;.dmg<span class="xt">&lt;/filepath</span>&gt; file, then drag the
+          <span class="xt">&lt;uicontrol</span>&gt;OBS<span class="xt">&lt;/uicontrol</span>&gt; icon into your <span class="xt">&lt;uicontrol</span>&gt;Applications<span class="xt">&lt;/uicontrol</span>&gt;
+          folder.<span class="xt">&lt;/cmd</span>&gt;
+      <span class="xt">&lt;/step</span>&gt;
+      <span class="xt">&lt;step</span>&gt;
+        <span class="xt">&lt;cmd</span>&gt;Launch <span class="xt">&lt;ph</span> <span class="xa">keyref</span>=<span class="xs">"product-name"</span>/&gt;.<span class="xt">&lt;/cmd</span>&gt;
+        <span class="xt">&lt;info</span>&gt;On first launch, the Auto-Configuration Wizard runs and recommends
+          output settings based on your hardware and internet connection. Accepting
+          the recommended settings is a good starting point.<span class="xt">&lt;/info</span>&gt;
+      <span class="xt">&lt;/step</span>&gt;
+    <span class="xt">&lt;/steps</span>&gt;
+    <span class="xt">&lt;postreq</span>&gt;
+      <span class="xt">&lt;note</span> <span class="xa">conref</span>=<span class="xs">"../reuse/shared-content.dita#shared-content/permission-caution"</span>/&gt;
+    <span class="xt">&lt;/postreq</span>&gt;
+  <span class="xt">&lt;/taskbody</span>&gt;
+<span class="xt">&lt;/task</span>&gt;
+</pre></div>
+        <div class="dita-pane" id="dita-pane-ref"><pre><span class="xd">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="xd">&lt;!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd"&gt;</span>
+<span class="xt">&lt;reference</span> <span class="xa">id</span>=<span class="xs">"reference-output-settings"</span>&gt;
+  <span class="xt">&lt;title</span>&gt;Output Settings Reference<span class="xt">&lt;/title</span>&gt;
+  <span class="xt">&lt;shortdesc</span>&gt;Key options in the <span class="xt">&lt;menucascade</span>&gt;<span class="xt">&lt;uicontrol</span>&gt;Settings<span class="xt">&lt;/uicontrol</span>&gt;
+    <span class="xt">&lt;uicontrol</span>&gt;Output<span class="xt">&lt;/uicontrol</span>&gt;<span class="xt">&lt;/menucascade</span>&gt; panel, in Advanced output
+    mode.<span class="xt">&lt;/shortdesc</span>&gt;
+  <span class="xt">&lt;refbody</span>&gt;
+    <span class="xt">&lt;section</span>&gt;
+      <span class="xt">&lt;title</span>&gt;Recording settings<span class="xt">&lt;/title</span>&gt;
+      <span class="xt">&lt;simpletable</span> <span class="xa">relcolwidth</span>=<span class="xs">"1* 1* 3*"</span> <span class="xa">keycol</span>=<span class="xs">"1"</span>&gt;
+        <span class="xt">&lt;sthead</span>&gt;
+          <span class="xt">&lt;stentry</span>&gt;Setting<span class="xt">&lt;/stentry</span>&gt;
+          <span class="xt">&lt;stentry</span>&gt;Typical value<span class="xt">&lt;/stentry</span>&gt;
+          <span class="xt">&lt;stentry</span>&gt;Description<span class="xt">&lt;/stentry</span>&gt;
+        <span class="xt">&lt;/sthead</span>&gt;
+        <span class="xt">&lt;strow</span>&gt;
+          <span class="xt">&lt;stentry</span>&gt;Recording Format<span class="xt">&lt;/stentry</span>&gt;
+          <span class="xt">&lt;stentry</span>&gt;mkv<span class="xt">&lt;/stentry</span>&gt;
+          <span class="xt">&lt;stentry</span>&gt;Container format. <span class="xt">&lt;codeph</span>&gt;mkv<span class="xt">&lt;/codeph</span>&gt; is recommended during
+            recording because it recovers cleanly if OBS crashes or the recording
+            is interrupted; remux to <span class="xt">&lt;codeph</span>&gt;mp4<span class="xt">&lt;/codeph</span>&gt; afterward if
+            needed.<span class="xt">&lt;/stentry</span>&gt;
+        <span class="xt">&lt;/strow</span>&gt;
+        <span class="xt">&lt;strow</span>&gt;
+          <span class="xt">&lt;stentry</span>&gt;Encoder<span class="xt">&lt;/stentry</span>&gt;
+          <span class="xt">&lt;stentry</span>&gt;x264 or hardware (NVENC/QuickSync/AMF)<span class="xt">&lt;/stentry</span>&gt;
+          <span class="xt">&lt;stentry</span>&gt;Software encoding (x264) gives the best quality per bit but uses
+            more CPU. Hardware encoders use a dedicated chip on the GPU and free up
+            CPU for the game or application being captured.<span class="xt">&lt;/stentry</span>&gt;
+        <span class="xt">&lt;/strow</span>&gt;
+        <span class="xt">&lt;strow</span>&gt;
+          <span class="xt">&lt;stentry</span>&gt;Rate Control<span class="xt">&lt;/stentry</span>&gt;
+          <span class="xt">&lt;stentry</span>&gt;CBR<span class="xt">&lt;/stentry</span>&gt;
+          <span class="xt">&lt;stentry</span>&gt;Constant Bitrate keeps file size predictable and is required for
+            most streaming platforms; CRF or a quality-based mode is often preferred
+            for local recordings.<span class="xt">&lt;/stentry</span>&gt;
+        <span class="xt">&lt;/strow</span>&gt;
+        <span class="xt">&lt;strow</span>&gt;
+          <span class="xt">&lt;stentry</span>&gt;Bitrate<span class="xt">&lt;/stentry</span>&gt;
+          <span class="xt">&lt;stentry</span>&gt;8000&amp;#8211;12000 Kbps (1080p)<span class="xt">&lt;/stentry</span>&gt;
+          <span class="xt">&lt;stentry</span>&gt;Higher bitrate improves quality but increases file size and, for
+            streaming, requires more stable upload bandwidth.<span class="xt">&lt;/stentry</span>&gt;
+        <span class="xt">&lt;/strow</span>&gt;
+        <span class="xt">&lt;strow</span>&gt;
+          <span class="xt">&lt;stentry</span>&gt;Keyframe Interval<span class="xt">&lt;/stentry</span>&gt;
+          <span class="xt">&lt;stentry</span>&gt;2 seconds<span class="xt">&lt;/stentry</span>&gt;
+          <span class="xt">&lt;stentry</span>&gt;Most streaming platforms require a keyframe every 2 seconds; leave
+            this at the default unless a platform specifies otherwise.<span class="xt">&lt;/stentry</span>&gt;
+        <span class="xt">&lt;/strow</span>&gt;
+      <span class="xt">&lt;/simpletable</span>&gt;
+    <span class="xt">&lt;/section</span>&gt;
+  <span class="xt">&lt;/refbody</span>&gt;
+<span class="xt">&lt;/reference</span>&gt;
+</pre></div>
+        <div class="dita-caption">Map organizes chapters, frontmatter, and a glossary list; the task topic reuses shared content via <code>conref</code> and filters steps by <code>platform</code>; the reference topic renders a structured settings table with <code>simpletable</code>.</div>
+      </div>
+    </div></section>
+
     <section id="independent"><div class="wrap">
       <div class="section-title"><div class="eyebrow">Independent projects</div><div><h2>Building systems, not just samples.</h2><p>These projects show how my practice is expanding beyond writing into documentation systems, information architecture, content quality automation, and AI/knowledge workflows.</p></div></div>
       <div class="grid">
@@ -276,7 +452,7 @@
 
     <section id="capabilities"><div class="wrap">
       <div class="section-title"><div class="eyebrow">Capabilities</div><div><h2>Content strategy backed by technical depth.</h2><p>I combine senior-level content practice with documentation architecture, developer experience, editorial systems, and emerging AI/knowledge workflows.</p></div></div>
-      <div class="capabilities"><div><strong>Technical documentation</strong><span>API reference, user manuals, product documentation, technical presentations, and training</span></div><div><strong>Information architecture</strong><span>Content hierarchy, navigation, taxonomy, structured authoring, and audience journeys</span></div><div><strong>Content strategy</strong><span>Website revamps, value propositions, thought leadership, SEO, and long-form B2B content</span></div><div><strong>AI & knowledge systems</strong><span>AI content, content intelligence, docs-as-code, editorial automation, and knowledge workflows</span></div></div>
+      <div class="capabilities"><div><strong>Technical documentation</strong><span>API reference, user manuals, product documentation, technical presentations, and training</span></div><div><strong>Information architecture</strong><span>Content hierarchy, navigation, taxonomy, DITA/structured authoring, and audience journeys</span></div><div><strong>Content strategy</strong><span>Website revamps, value propositions, thought leadership, SEO, and long-form B2B content</span></div><div><strong>AI & knowledge systems</strong><span>AI content, content intelligence, docs-as-code, editorial automation, and knowledge workflows</span></div></div>
     </div></section>
 
     <section id="about"><div class="wrap about">
@@ -360,6 +536,19 @@
     });
 
     collectGalleryItems();
+  })();
+
+  (function(){
+    var tabs = document.querySelectorAll('.dita-tab');
+    tabs.forEach(function(tab){
+      tab.addEventListener('click', function(){
+        var target = tab.getAttribute('data-pane');
+        document.querySelectorAll('.dita-tab').forEach(function(t){ t.classList.remove('active'); });
+        document.querySelectorAll('.dita-pane').forEach(function(p){ p.classList.remove('active'); });
+        tab.classList.add('active');
+        document.getElementById(target).classList.add('active');
+      });
+    });
   })();
   </script>
 </body>
