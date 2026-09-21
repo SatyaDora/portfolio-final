@@ -1,0 +1,112 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2026"><meta name="generator" content="DITA-OT"><meta name="description" content="Filters modify a single source's video or audio without affecting the rest of the scene."><title>Filters Overview</title><link rel="stylesheet" type="text/css" href="../../../commonltr.css"><link rel="stylesheet" type="text/css" href="../../../streamforge.css"><style type="text/css">/*
+  webhelp-custom.css
+  Publish-time stylesheet for the OBS Studio Quick Start WebHelp/HTML5 output.
+
+  IMPORTANT: The exact class names DITA-OT emits (note types, table classes, etc.)
+  vary slightly by DITA-OT version and which output plugin you use (webhelp-classic,
+  webhelp-responsive, or html5). Before wiring this in, generate the output once,
+  open a topic in the browser, and inspect the actual HTML with devtools to confirm
+  these selectors match. Adjust selector names below as needed -- do not assume.
+*/
+
+:root {
+  --obs-brand-color: #2f5fa8;
+  --obs-brand-color-dark: #1e3f73;
+  --obs-caution-bg: #fdecea;
+  --obs-caution-border: #c0392b;
+  --obs-tip-bg: #eaf4ec;
+  --obs-tip-border: #2e7d47;
+  --obs-code-bg: #f4f4f4;
+  --obs-body-font: "Segoe UI", -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --obs-mono-font: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+body {
+  font-family: var(--obs-body-font);
+  line-height: 1.55;
+  color: #222;
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* Topic titles */
+h1, .title { color: var(--obs-brand-color-dark); }
+h1 { border-bottom: 2px solid var(--obs-brand-color); padding-bottom: 0.3rem; }
+
+/* Short description -- typically rendered as a lead paragraph */
+.shortdesc { font-size: 1.05rem; color: #555; margin-bottom: 1.5rem; }
+
+/* Notes and cautions -- confirm actual class names in generated output first */
+.note { border-left: 4px solid #999; background: #f7f7f7; padding: 0.6rem 1rem; margin: 1rem 0; }
+.note.caution, .cautionNote { border-left-color: var(--obs-caution-border); background: var(--obs-caution-bg); }
+.note.tip, .tipNote { border-left-color: var(--obs-tip-border); background: var(--obs-tip-bg); }
+
+/* UI controls and menu paths */
+.uicontrol { font-weight: 600; }
+.menucascade { font-style: normal; color: var(--obs-brand-color-dark); }
+
+/* Code, filenames, commands */
+.codeph, .filepath, code, pre {
+  font-family: var(--obs-mono-font);
+  background: var(--obs-code-bg);
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+}
+
+/* Steps */
+.steps { counter-reset: obs-step; }
+.step { margin-bottom: 0.9rem; }
+
+/* Reference tables -- verified against real DITA-OT html5 output: table.table, thead.thead, th/td.entry */
+table.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+table.table thead th.entry {
+  background: var(--obs-brand-color);
+  color: #fff;
+  text-align: left;
+  padding: 0.5rem;
+}
+table.table td.entry {
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem;
+  vertical-align: top;
+}
+
+/* Custom outputclass hooks (see task-install.dita, reference-system-requirements.dita) */
+.requirements-list li { margin-bottom: 0.35rem; }
+.callout-box { box-shadow: 0 1px 4px rgba(0,0,0,0.15); }
+
+/* Print: hide navigation chrome, keep only content */
+@media print {
+  nav, .toc, .breadcrumb, .wh_publish_index { display: none !important; }
+  body { max-width: none; padding: 0; }
+}
+
+/* Small-viewport responsiveness */
+@media (max-width: 600px) {
+  body { padding: 1rem; }
+  table.properties, table.reference-properties { font-size: 0.85rem; }
+}
+</style></head><body id="filters-overview"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">Filters Overview</h1>
+  
+  <div class="body conbody"><p class="shortdesc">Filters modify a single source's video or audio without affecting the rest
+    of the scene.</p>
+    <p class="p">Filters are attached to an individual source (or to a scene, for scene-wide
+      effects) and are applied in order from top to bottom of the filter list. Video
+      filters and audio filters are listed separately because a source can have both at
+      once.</p>
+    <p class="p">Common video filters include Chroma Key, Color Correction, Sharpen, Crop/Pad,
+      Scroll, and LUT application. Common audio filters include Noise Suppression, Noise
+      Gate, Compressor, and Limiter.</p>
+    <div class="note note note_note"><span class="note__title">Note:</span> <div class="note__body">Filter order matters. For example, a Crop/Pad filter placed before a Chroma Key
+      filter crops the image before the key is calculated; placed after, it crops the
+      already-keyed result.</div></div>
+  </div>
+<nav role="navigation" class="related-links"><ul class="ullinks"><li class="link ulchildlink"><strong><a href="t-filter-chroma-key.html">Applying a Chroma Key Filter</a></strong><br>Remove a solid-color background from a camera source.</li><li class="link ulchildlink"><strong><a href="t-filter-color-correction.html">Applying a Color Correction Filter</a></strong><br>Adjust brightness, contrast, saturation, and color balance of a     source.</li><li class="link ulchildlink"><strong><a href="t-filter-noise-suppression.html">Applying a Noise Suppression Filter</a></strong><br>Reduce steady background hiss or fan noise on a microphone     source.</li><li class="link ulchildlink"><strong><a href="t-filter-chroma-key.html">Applying a Chroma Key Filter</a></strong><br>Remove a solid-color background from a camera source.</li><li class="link ulchildlink"><strong><a href="t-filter-color-correction.html">Applying a Color Correction Filter</a></strong><br>Adjust brightness, contrast, saturation, and color balance of a     source.</li><li class="link ulchildlink"><strong><a href="t-filter-noise-suppression.html">Applying a Noise Suppression Filter</a></strong><br>Reduce steady background hiss or fan noise on a microphone     source.</li></ul></nav></article></main></body></html>

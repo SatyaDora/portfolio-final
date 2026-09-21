@@ -1,0 +1,119 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2026"><meta name="generator" content="DITA-OT"><meta name="description" content="Capture an entire monitor as a source."><title>Adding a Display Capture Source</title><link rel="stylesheet" type="text/css" href="../../../commonltr.css"><link rel="stylesheet" type="text/css" href="../../../streamforge.css"><style type="text/css">/*
+  webhelp-custom.css
+  Publish-time stylesheet for the OBS Studio Quick Start WebHelp/HTML5 output.
+
+  IMPORTANT: The exact class names DITA-OT emits (note types, table classes, etc.)
+  vary slightly by DITA-OT version and which output plugin you use (webhelp-classic,
+  webhelp-responsive, or html5). Before wiring this in, generate the output once,
+  open a topic in the browser, and inspect the actual HTML with devtools to confirm
+  these selectors match. Adjust selector names below as needed -- do not assume.
+*/
+
+:root {
+  --obs-brand-color: #2f5fa8;
+  --obs-brand-color-dark: #1e3f73;
+  --obs-caution-bg: #fdecea;
+  --obs-caution-border: #c0392b;
+  --obs-tip-bg: #eaf4ec;
+  --obs-tip-border: #2e7d47;
+  --obs-code-bg: #f4f4f4;
+  --obs-body-font: "Segoe UI", -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --obs-mono-font: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+body {
+  font-family: var(--obs-body-font);
+  line-height: 1.55;
+  color: #222;
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* Topic titles */
+h1, .title { color: var(--obs-brand-color-dark); }
+h1 { border-bottom: 2px solid var(--obs-brand-color); padding-bottom: 0.3rem; }
+
+/* Short description -- typically rendered as a lead paragraph */
+.shortdesc { font-size: 1.05rem; color: #555; margin-bottom: 1.5rem; }
+
+/* Notes and cautions -- confirm actual class names in generated output first */
+.note { border-left: 4px solid #999; background: #f7f7f7; padding: 0.6rem 1rem; margin: 1rem 0; }
+.note.caution, .cautionNote { border-left-color: var(--obs-caution-border); background: var(--obs-caution-bg); }
+.note.tip, .tipNote { border-left-color: var(--obs-tip-border); background: var(--obs-tip-bg); }
+
+/* UI controls and menu paths */
+.uicontrol { font-weight: 600; }
+.menucascade { font-style: normal; color: var(--obs-brand-color-dark); }
+
+/* Code, filenames, commands */
+.codeph, .filepath, code, pre {
+  font-family: var(--obs-mono-font);
+  background: var(--obs-code-bg);
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+}
+
+/* Steps */
+.steps { counter-reset: obs-step; }
+.step { margin-bottom: 0.9rem; }
+
+/* Reference tables -- verified against real DITA-OT html5 output: table.table, thead.thead, th/td.entry */
+table.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+table.table thead th.entry {
+  background: var(--obs-brand-color);
+  color: #fff;
+  text-align: left;
+  padding: 0.5rem;
+}
+table.table td.entry {
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem;
+  vertical-align: top;
+}
+
+/* Custom outputclass hooks (see task-install.dita, reference-system-requirements.dita) */
+.requirements-list li { margin-bottom: 0.35rem; }
+.callout-box { box-shadow: 0 1px 4px rgba(0,0,0,0.15); }
+
+/* Print: hide navigation chrome, keep only content */
+@media print {
+  nav, .toc, .breadcrumb, .wh_publish_index { display: none !important; }
+  body { max-width: none; padding: 0; }
+}
+
+/* Small-viewport responsiveness */
+@media (max-width: 600px) {
+  body { padding: 1rem; }
+  table.properties, table.reference-properties { font-size: 0.85rem; }
+}
+</style></head><body id="source-display-capture"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">Adding a Display Capture Source</h1>
+  
+  <div class="body taskbody"><p class="shortdesc">Capture an entire monitor as a source.</p>
+    <section class="section context">
+      <p class="p">Display Capture mirrors an entire monitor, including anything that appears on
+        top of other windows, such as notifications or cursor tooltips.</p>
+    </section>
+    <section><ol class="ol steps"><li class="li step stepexpand">
+        <span class="ph cmd">In the Sources panel, click the <span class="ph uicontrol">+</span> button and choose
+          <span class="ph uicontrol">Display Capture</span>.</span>
+      </li><li class="li step stepexpand">
+        <span class="ph cmd">Name the source and click <span class="ph uicontrol">OK</span>.</span>
+      </li><li class="li step stepexpand">
+        <span class="ph cmd">Choose which monitor to capture from the <span class="ph uicontrol">Display</span>
+          dropdown.</span>
+      </li><li class="li step stepexpand">
+        <span class="ph cmd">Optionally enable <span class="ph uicontrol">Capture Cursor</span>.</span>
+        <div class="itemgroup info">Turn this off if you plan to add a separate, styled cursor overlay
+          later.</div>
+      </li></ol></section>
+    <section class="section result">The selected monitor appears in the current scene and updates live.</section>
+  </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="c-scenes-and-sources.html" title="How OBS Studio's scene and source model works.">Scenes and Sources</a></div></div><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="c-scenes-and-sources-1.html" title="How OBS Studio's scene and source model works.">Scenes and Sources</a></div></div></nav></article></main></body></html>
