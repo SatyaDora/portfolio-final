@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StreamForge Creator Suite Documentation</title>
+  <meta name="description" content="A DITA-based technical documentation portfolio sample demonstrating structured authoring and multi-format publishing.">
+
+  <style>
+    :root {
+      --navy: #173653;
+      --blue: #2468d8;
+      --orange: #f26b38;
+      --text: #243447;
+      --muted: #5f6f7f;
+      --light: #f5f8fb;
+      --border: #dce5ed;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--light);
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: var(--navy);
+      color: var(--white);
+      padding: 64px 24px 56px;
+      border-bottom: 6px solid var(--orange);
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: #c8d8e8;
+      font-size: 0.9rem;
+      font-weight: bold;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 850px;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.15;
+    }
+
+    .hero p {
+      max-width: 800px;
+      margin: 20px 0 0;
+      color: #e6eef5;
+      font-size: 1.12rem;
+    }
+
+    main {
+      padding: 42px 0 64px;
+    }
+
+    section {
+      margin-bottom: 34px;
+    }
+
+    h2 {
+      color: var(--navy);
+      margin-top: 0;
+      font-size: 1.65rem;
+    }
+
+    h3 {
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .intro,
+    .card,
+    .workflow,
+    .deliverables,
+    .skills,
+    .notes {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 26px;
+      box-shadow: 0 5px 18px rgba(23, 54, 83, 0.05);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .workflow-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .workflow-step {
+      position: relative;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--orange);
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .workflow-step strong {
+      display: block;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .workflow-step:not(:last-child)::after {
+      content: "→";
+      position: absolute;
+      right: -18px;
+      top: 42%;
+      color: var(--orange);
+      font-size: 1.5rem;
+      font-weight: bold;
+      z-index: 2;
+    }
+
+    .deliverable-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .deliverable-card p {
+      flex: 1;
+      color: var(--muted);
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 10px 15px;
+      border-radius: 7px;
+      background: var(--blue);
+      color: var(--white);
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .button:hover {
+      background: var(--navy);
+      text-decoration: none;
+    }
+
+    .button.secondary {
+      background: var(--navy);
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .skill-list li {
+      background: #edf3fa;
+      border: 1px solid #d6e3f0;
+      border-radius: 20px;
+      padding: 6px 12px;
+      font-size: 0.92rem;
+    }
+
+    .notes {
+      border-left: 5px solid var(--orange);
+    }
+
+    footer {
+      padding: 24px;
+      background: var(--navy);
+      color: #dce8f2;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    code {
+      background: #eef2f6;
+      padding: 2px 5px;
+      border-radius: 4px;
+    }
+
+    @media (max-width: 850px) {
+      .grid,
+      .workflow-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .workflow-step:not(:last-child)::after {
+        display: none;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .grid,
+      .workflow-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 44px 20px;
+      }
+
+      .intro,
+      .card,
+      .workflow,
+      .deliverables,
+      .skills,
+      .notes {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="hero">
+    <div class="container">
+      <p class="eyebrow">Technical Documentation Portfolio</p>
+      <h1>StreamForge Creator Suite Documentation</h1>
+      <p>
+        A structured documentation sample demonstrating DITA XML authoring,
+        information architecture, and publishing to HTML5, WebHelp, and PDF.
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <h2>Project Overview</h2>
+      <p>
+        This project presents a structured technical documentation workflow
+        for the StreamForge Creator Suite. The sample demonstrates how
+        modular documentation topics can be organized and published into
+        multiple delivery formats from a common documentation architecture.
+      </p>
+      <p>
+        The published outputs include web-based documentation, searchable
+        WebHelp, and downloadable PDF documentation.
+      </p>
+    </section>
+
+    <section>
+      <h2>Documentation Workflow</h2>
+      <div class="workflow">
+        <div class="workflow-grid">
+          <div class="workflow-step">
+            <strong>1. Structured Source</strong>
+            DITA XML topics and supporting assets.
+          </div>
+          <div class="workflow-step">
+            <strong>2. DITA Map</strong>
+            Topic organization, hierarchy, navigation, and relationships.
+          </div>
+          <div class="workflow-step">
+            <strong>3. Authoring and Publishing</strong>
+            Oxygen XML and the selected publishing workflow.
+          </div>
+          <div class="workflow-step">
+            <strong>4. Delivery Formats</strong>
+            HTML5, WebHelp, and PDF outputs.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Published Deliverables</h2>
+      <div class="grid">
+        <article class="card deliverable-card">
+          <h3>HTML5 Documentation</h3>
+          <p>
+            Browse the published StreamForge documentation in a web-based
+            HTML format.
+          </p>
+          <!-- Update this path if your HTML output uses a different folder name. -->
+          <a class="button" href="html/index.html" target="_blank" rel="noopener">
+            View HTML5 Documentation
+          </a>
+        </article>
+
+        <article class="card deliverable-card">
+          <h3>WebHelp</h3>
+          <p>
+            Open the WebHelp output with its navigation, search, styles,
+            scripts, images, and supporting files.
+          </p>
+          <!-- Update this path if your WebHelp output uses a different folder name. -->
+          <a class="button" href="webhelp/index.html" target="_blank" rel="noopener">
+            View WebHelp
+          </a>
+        </article>
+
+        <article class="card deliverable-card">
+          <h3>PDF Documentation</h3>
+          <p>
+            Access the downloadable PDF version of the StreamForge
+            documentation.
+          </p>
+          <!-- Rename the PDF filename below to match your uploaded file. -->
+          <a class="button" href="pdf/StreamForge-Creator-Suite.pdf" target="_blank" rel="noopener">
+            View PDF
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Source and Technical Evidence</h2>
+      <div class="grid">
+        <article class="card deliverable-card">
+          <h3>DITA Source</h3>
+          <p>
+            Inspect the DITA topics, DITA map, metadata, and supporting
+            source assets used for the documentation sample.
+          </p>
+          <a class="button secondary" href="source/" target="_blank" rel="noopener">
+            View DITA Source
+          </a>
+        </article>
+
+        <article class="card deliverable-card">
+          <h3>Project Notes</h3>
+          <p>
+            Read the project README for the documentation scope, tools,
+            publishing workflow, and portfolio context.
+          </p>
+          <a class="button secondary" href="README.md" target="_blank" rel="noopener">
+            View README
+          </a>
+        </article>
+
+        <article class="card deliverable-card">
+          <h3>Documentation Scope</h3>
+          <p>
+            The sample may include interface guidance, installation,
+            system requirements, setup tasks, configuration, and usage topics.
+          </p>
+          <span class="button secondary">Structured Topic-Based Content</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="skills">
+      <h2>Skills Demonstrated</h2>
+      <ul class="skill-list">
+        <li>DITA XML</li>
+        <li>DITA Maps</li>
+        <li>Oxygen XML</li>
+        <li>Structured Authoring</li>
+        <li>Topic-Based Authoring</li>
+        <li>Information Architecture</li>
+        <li>Content Reuse</li>
+        <li>Metadata</li>
+        <li>Cross-References</li>
+        <li>Conditional Processing</li>
+        <li>HTML5 Publishing</li>
+        <li>WebHelp Publishing</li>
+        <li>PDF Publishing</li>
+      </ul>
+    </section>
+
+    <section class="notes">
+      <h2>Repository Structure</h2>
+      <p>
+        The project is organized so that the portfolio page remains separate
+        from the generated documentation outputs.
+      </p>
+      <p>
+        Recommended structure:
+      </p>
+      <pre><code>streamforge/
+├── index.html
+├── README.md
+├── html/
+├── webhelp/
+├── pdf/
+└── source/</code></pre>
+      <p>
+        Keep the complete HTML5 and WebHelp output folders together with
+        their CSS, JavaScript, images, search files, and other dependencies.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    StreamForge Creator Suite Documentation · Technical Writing Portfolio
+  </footer>
+</body>
+</html>
