@@ -288,51 +288,64 @@
       <p style="color:var(--muted); font-size:var(--fs-base); max-width:640px; margin-top:26px;">This isn't a one-time cleanup — it's a standing gate. Every push runs the same check in GitHub Actions, so editorial quality doesn't depend on someone catching it by eye.</p>
     </div></section>
         <section id="dita"><div class="wrap">
-      <div class="section-title"><div class="eyebrow">Structured authoring</div><div><h2>DITA XML — one source, reused everywhere.</h2><p>Flat, duplicated documentation gets expensive to maintain — the same warning, the same product name, and near-identical install steps drift out of sync the moment something changes. This sample handles that with typed topics, a bookmap, and DITA's own reuse mechanisms: a shared caution note pulled in with <code>conref</code>, the product name resolved everywhere via <code>keyref</code>, related-links generated from a <code>reltable</code> instead of written by hand, and a Windows-only edition built from the identical source using a <code>.ditaval</code> filter — no duplicated content, no branched files.</p></div></div>
+      <div class="section-title"><div class="eyebrow">Structured authoring</div><div><h2>StreamForge Creator Suite — structured DITA content across formats.</h2><p>Flat, duplicated documentation gets expensive to maintain — the same warning, the same product name, and near-identical install steps drift out of sync the moment something changes. This sample handles that with typed topics, a bookmap, and DITA's own reuse mechanisms: a shared caution note pulled in with <code>conref</code>, the product name resolved everywhere via <code>keyref</code>, related-links generated from a <code>reltable</code> instead of written by hand, and a Windows-only edition built from the identical source using a <code>.ditaval</code> filter — no duplicated content, no branched files.</p></div></div>
 
-      <p class="dita-links-line"><a href="obs-guide/index.html" target="_blank" rel="noopener">View the published HTML ↗</a><span class="sep">·</span><a href="obs-guide-quickstart.pdf" target="_blank" rel="noopener">Download the PDF manual ↗</a><span class="sep">·</span><a href="obs-guide-windows-edition.pdf" target="_blank" rel="noopener">Windows-only edition ↗</a></p>
+      <p class="dita-links-line"><a href="streamforge/html/index.html" target="_blank" rel="noopener">View the published HTML ↗</a><span class="sep">·</span><a href="streamforge/pdf/StreamForge-Creator-Suite.pdf" target="_blank" rel="noopener">Download the PDF manual ↗</a></p>
 
       <div class="ide-panel">
-        <div class="ide-titlebar"><span class="idots"><i></i><i></i><i></i></span><span class="ifile">obs-guide/</span></div>
-        <div class="ide-body">
-          <div class="ide-sidebar">
-          <ul>
-          <li><button class="ide-file active" data-pane="ide-pane-map">obs-guide.bookmap<span class="itag">map</span></button>
+  <div class="ide-titlebar"><span class="idots"><i></i><i></i><i></i></span><span class="ifile">streamforge/</span></div>
+  <div class="ide-body">
+    <div class="ide-sidebar">
+    <ul>
+      <li><button class="ide-file active" data-pane="ide-pane-map">obs-bookmap.ditamap<span class="itag">map</span></button>
+        <ul>
+          <li><button class="ide-file" data-pane="ide-pane-sysreq">r-system-requirements-obs.dita<span class="itag">reference</span></button></li>
+          <li><button class="ide-file" data-pane="ide-pane-install">t-installing-obs.dita<span class="itag">task</span></button></li>
+          <li><div class="ide-node">Interface &amp; Setup <span class="itag">concept</span></div>
             <ul>
-              <li><button class="ide-file" data-pane="ide-pane-preface">preface.dita<span class="itag">frontmatter</span></button></li>
-              <li><div class="ide-node">Getting Started <span class="itag">concept</span></div>
-                <ul>
-                  <li><button class="ide-file" data-pane="ide-pane-concept">concept-scenes-sources.dita<span class="itag">concept</span></button></li>
-                  <li><button class="ide-file" data-pane="ide-pane-task-install">task-install.dita<span class="itag">task</span></button></li>
-                  <li><button class="ide-file" data-pane="ide-pane-task-create">task-create-scene.dita<span class="itag">task</span></button></li>
-                </ul>
-              </li>
-              <li><div class="ide-node">Recording <span class="itag">chapter</span></div>
-                <ul>
-                  <li><button class="ide-file" data-pane="ide-pane-task-record">task-record-video.dita<span class="itag">task</span></button></li>
-                  <li><button class="ide-file" data-pane="ide-pane-ref-output">reference-output-settings.dita<span class="itag">reference</span></button></li>
-                  <li><button class="ide-file" data-pane="ide-pane-ref-trouble">reference-troubleshooting.dita<span class="itag">reference</span></button></li>
-                </ul>
-              </li>
-              <li><div class="ide-node">Glossary <span class="itag">backmatter</span></div>
-                <ul>
-                  <li><button class="ide-file" data-pane="ide-pane-gloss-scene">glossentry-scene.dita<span class="itag">term</span></button></li>
-                  <li><button class="ide-file" data-pane="ide-pane-gloss-source">glossentry-source.dita<span class="itag">term</span></button></li>
-                  <li><button class="ide-file" data-pane="ide-pane-gloss-encoder">glossentry-encoder.dita<span class="itag">term</span></button></li>
-                </ul>
-              </li>
-              <li><button class="ide-file" data-pane="ide-pane-val">windows-edition.ditaval<span class="itag">filter</span></button></li>
+              <li><button class="ide-file" data-pane="ide-pane-interface">c-interface-overview.dita<span class="itag">concept</span></button></li>
+              <li><button class="ide-file" data-pane="ide-pane-scenes">c-scenes-and-sources.dita<span class="itag">concept</span></button></li>
+              <li><button class="ide-file" data-pane="ide-pane-profiles">c-scene-collections-profiles.dita<span class="itag">concept</span></button></li>
+              <li><button class="ide-file" data-pane="ide-pane-studiomode">c-studio-mode.dita<span class="itag">concept</span></button></li>
+              <li><button class="ide-file" data-pane="ide-pane-transitions">c-transitions.dita<span class="itag">concept</span></button></li>
+              <li><button class="ide-file" data-pane="ide-pane-plugins">c-plugins-scripting.dita<span class="itag">concept</span></button></li>
+            </ul>
+          </li>
+          <li><div class="ide-node">Capturing Sources <span class="itag">chapter</span></div>
+            <ul>
+              <li><button class="ide-file" data-pane="ide-pane-window">t-source-window-capture.dita<span class="itag">task</span></button></li>
+              <li><button class="ide-file" data-pane="ide-pane-display">t-source-display-capture.dita<span class="itag">task</span></button></li>
+              <li><button class="ide-file" data-pane="ide-pane-game">t-source-game-capture.dita<span class="itag">task</span></button></li>
+              <li><button class="ide-file" data-pane="ide-pane-record">t-recording.dita<span class="itag">task</span></button></li>
+            </ul>
+          </li>
+          <li><div class="ide-node">Filters <span class="itag">chapter</span></div>
+            <ul>
+              <li><button class="ide-file" data-pane="ide-pane-filters">c-filters-overview.dita<span class="itag">concept</span></button></li>
+              <li><button class="ide-file" data-pane="ide-pane-chroma">t-filter-chroma-key.dita<span class="itag">task</span></button></li>
+              <li><button class="ide-file" data-pane="ide-pane-color">t-filter-color-correction.dita<span class="itag">task</span></button></li>
+              <li><button class="ide-file" data-pane="ide-pane-noise">t-filter-noise-suppression.dita<span class="itag">task</span></button></li>
+            </ul>
+          </li>
+          <li><div class="ide-node">Reference &amp; Appendix <span class="itag">backmatter</span></div>
+            <ul>
+              <li><button class="ide-file" data-pane="ide-pane-settings">r-settings-reference.dita<span class="itag">reference</span></button></li>
+              <li><button class="ide-file" data-pane="ide-pane-hotkeys">r-hotkeys.dita<span class="itag">reference</span></button></li>
+              <li><button class="ide-file" data-pane="ide-pane-cliargs">r-appendix-cli-args.dita<span class="itag">reference</span></button></li>
+              <li><button class="ide-file" data-pane="ide-pane-formats">r-appendix-file-formats.dita<span class="itag">reference</span></button></li>
             </ul>
           </li>
         </ul>
-          </div>
+      </li>
+    </ul>
+    </div>
           <div class="ide-code">
         <div class="ide-pane active" id="ide-pane-map"><pre><span class="xd">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
 <span class="xd">&lt;!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd"&gt;</span>
-<span class="xt">&lt;bookmap</span> <span class="xa">id</span>=<span class="xs">"obs-guide-bookmap"</span>&gt;
+<span class="xt">&lt;bookmap</span> <span class="xa">id</span>=<span class="xs">"streamforge-bookmap"</span>&gt;
   <span class="xt">&lt;booktitle</span>&gt;
-    <span class="xt">&lt;mainbooktitle</span>&gt;OBS Studio Quick Start<span class="xt">&lt;/mainbooktitle</span>&gt;
-    <span class="xt">&lt;booktitlealt</span>&gt;Recording Your First Video<span class="xt">&lt;/booktitlealt</span>&gt;
+    <span class="xt">&lt;mainbooktitle</span>&gt;StreamForge Creator Suite<span class="xt">&lt;/mainbooktitle</span>&gt;
+    <span class="xt">&lt;booktitlealt</span>&gt;Structured DITA Documentation Sample<span class="xt">&lt;/booktitlealt</span>&gt;
   <span class="xt">&lt;/booktitle</span>&gt;
   <span class="xt">&lt;bookmeta</span>&gt;
     <span class="xt">&lt;author</span>&gt;Documentation Sample<span class="xt">&lt;/author</span>&gt;
@@ -840,3 +853,5 @@
   </script>
 </body>
 </html>
+
+
