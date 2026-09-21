@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="system-requirements-obs" otherprops="fa-capture">
+  <title>System Requirements</title>
+  <shortdesc>Minimum and recommended specifications for OBS Studio.</shortdesc>
+  <refbody>
+    <section conkeyref="system-requirements-common/sysreq-intro"/>
+    <section id="obs-sysreq-table">
+      <simpletable relcolwidth="1* 1* 1*">
+        <sthead>
+          <stentry></stentry>
+          <stentry>Minimum</stentry>
+          <stentry>Recommended</stentry>
+        </sthead>
+        <strow>
+          <stentry>OS</stentry>
+          <stentry>Windows 10, macOS 12, or a current Linux distribution</stentry>
+          <stentry>Windows 11, macOS 14+, or current Linux distribution</stentry>
+        </strow>
+        <strow>
+          <stentry>GPU</stentry>
+          <stentry>DirectX 10.1 / OpenGL 3.3 compatible</stentry>
+          <stentry>Dedicated GPU with hardware encoder (NVENC/QuickSync/AMF)</stentry>
+        </strow>
+        <strow>
+          <stentry>RAM</stentry>
+          <stentry>4 GB</stentry>
+          <stentry>8 GB or more</stentry>
+        </strow>
+      </simpletable>
+    </section>
+  </refbody>
+</reference>

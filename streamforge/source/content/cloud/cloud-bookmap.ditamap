@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd">
+<bookmap id="cloud-bookmap">
+  <booktitle>
+    <mainbooktitle>StreamForge Cloud</mainbooktitle>
+  </booktitle>
+  <bookmeta>
+    <author>StreamForge Creator Suite Documentation Project</author>
+    <bookrights>
+      <copyrfirst><year>2026</year></copyrfirst>
+      <bookowner><person>StreamForge Creator Suite Documentation Project</person></bookowner>
+    </bookrights>
+  </bookmeta>
+
+  <frontmatter>
+    <notices>
+      <topicref href="../common/topics/c-notices.dita"/>
+    </notices>
+    <mapref href="../common/common.ditamap" processing-role="resource-only"/>
+  </frontmatter>
+
+
+  <chapter href="../common/topics/c-account-licensing.dita"/>
+  <chapter href="topics/r-system-requirements-cloud.dita"/>
+  <chapter href="topics/t-uploading-recording.dita"/>
+  <chapter href="topics/t-sharing-permissions.dita"/>
+  <chapter href="topics/r-transcoding-settings.dita"/>
+  <chapter href="../common/topics/c-support-contact.dita"/>
+</bookmap>

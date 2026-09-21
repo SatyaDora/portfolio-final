@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map id="capture-map">
+  <title>StreamForge Capture</title>
+
+  <mapref href="../common/common.ditamap" processing-role="resource-only"/>
+
+  <topicref href="topics/t-installing-capture.dita"/>
+  <topicref href="topics/r-system-requirements-capture.dita"/>
+  <topicref href="topics/c-scenes-and-sources-capture.dita"/>
+  <topicref href="topics/t-recording-capture.dita" keys="capture-recording"/>
+  <topicref href="topics/t-upgrade-to-studiopro.dita" keys="capture-upgrade-studiopro"/>
+  <topicref href="../common/topics/c-support-contact.dita"/>
+
+</map>

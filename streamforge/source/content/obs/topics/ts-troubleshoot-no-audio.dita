@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="troubleshoot-no-audio" otherprops="fa-audio">
+  <title>Troubleshooting: No Audio in Recording</title>
+  <shortdesc>The recorded file has video but no sound.</shortdesc>
+  <troublebody>
+    <condition>
+      <p>Playing back a finished recording produces picture with no audio track, or with
+        a track that is silent.</p>
+    </condition>
+    <troubleSolution>
+      <cause>
+        <p>The audio source was muted, or its volume fader was at zero, at the time of
+          recording. Muting in the Audio Mixer is captured&#8212;OBS Studio records
+          exactly what you would hear.</p>
+      </cause>
+      <remedy>
+        <responsibleParty>User</responsibleParty>
+        <steps>
+          <step>
+            <cmd>Check the Audio Mixer for a muted icon on the relevant source.</cmd>
+          </step>
+          <step>
+            <cmd>Unmute the source and confirm the fader is above zero.</cmd>
+          </step>
+          <step>
+            <cmd>Record a short test clip and play it back before recording anything
+              longer.</cmd>
+          </step>
+        </steps>
+      </remedy>
+    </troubleSolution>
+    <troubleSolution>
+      <cause>
+        <p>The wrong audio device is assigned as the global Desktop Audio or Mic/Auxiliary
+          device in Settings, so the intended device was never being captured at
+          all.</p>
+      </cause>
+      <remedy>
+        <responsibleParty>User</responsibleParty>
+        <steps>
+          <step>
+            <cmd>Open <uicontrol>Settings &gt; Audio</uicontrol>.</cmd>
+          </step>
+          <step>
+            <cmd>Confirm the correct devices are selected for Desktop Audio and
+              Mic/Auxiliary Audio.</cmd>
+          </step>
+        </steps>
+      </remedy>
+    </troubleSolution>
+  </troublebody>
+</troubleshooting>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="plugins-scripting" otherprops="fa-scripting">
+  <title>Plugins and Scripting Overview</title>
+  <shortdesc>Two ways to extend OBS Studio beyond its built-in features.</shortdesc>
+  <conbody>
+    <p><b>Plugins</b> are compiled extensions, installed alongside OBS Studio, that can add
+      new source types, filters, or output methods. They're installed by copying files
+      into the OBS plugins directory or through a platform-specific installer.</p>
+    <p><b>Scripts</b> are Lua or Python files loaded from <uicontrol>Tools &gt; Scripts
+      </uicontrol> that can automate scene switching, respond to events, or add simple
+      custom behavior without recompiling anything.</p>
+  </conbody>
+</concept>

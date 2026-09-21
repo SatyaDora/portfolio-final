@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="team-collaboration" otherprops="tier-pro fa-collaboration">
+  <title>Team Collaboration</title>
+  <shortdesc>Share a scene collection and control access to it across a team.</shortdesc>
+  <conbody>
+    <p>A Studio Pro scene collection can be shared with teammates on the same StreamForge
+      account's team. Shared collections sync automatically, and role-based permissions
+      control who can edit sources and filters versus who can only switch scenes during a
+      live session.</p>
+    <p>Two roles are available: <b>Editor</b>, who can change anything in the shared
+      collection, and <b>Operator</b>, who can switch scenes and start/stop
+      recording or streaming but cannot modify sources or filters.</p>
+  </conbody>
+</concept>

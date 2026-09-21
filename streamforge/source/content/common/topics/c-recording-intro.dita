@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="recording-intro-shared" otherprops="fa-capture">
+  <title>Recording, generally</title>
+  <shortdesc>Shared framing for the recording task, reused wherever a StreamForge product
+    offers local recording.</shortdesc>
+  <conbody>
+    <p id="recording-intro-para">Recording captures exactly what the current scene shows,
+      including all visible sources and unmuted audio, to a local video file. Nothing is
+      uploaded or shared automatically&#8212;recording is entirely local.</p>
+  </conbody>
+</concept>

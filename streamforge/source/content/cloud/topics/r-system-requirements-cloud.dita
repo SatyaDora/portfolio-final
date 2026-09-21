@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="system-requirements-cloud" otherprops="fa-streaming tier-free">
+  <title>System Requirements</title>
+  <shortdesc>StreamForge Cloud runs entirely in a web browser&#8212;there is no desktop
+    application to install.</shortdesc>
+  <refbody>
+    <section conkeyref="system-requirements-common/sysreq-intro"/>
+    <section id="cloud-sysreq-table">
+      <simpletable relcolwidth="1* 2*">
+        <sthead>
+          <stentry></stentry>
+          <stentry>Requirement</stentry>
+        </sthead>
+        <strow>
+          <stentry>Browser</stentry>
+          <stentry>A current version of any major browser with hardware video decoding
+            enabled</stentry>
+        </strow>
+        <strow>
+          <stentry>Connection</stentry>
+          <stentry>Broadband recommended for uploading recordings above 1080p</stentry>
+        </strow>
+      </simpletable>
+    </section>
+  </refbody>
+</reference>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="recording-capture" otherprops="fa-capture tier-free">
+  <title>Recording a Video</title>
+  <shortdesc>Record your current layout to a local video file.</shortdesc>
+  <taskbody>
+    <context>
+      <p conkeyref="recording-intro-shared/recording-intro-para"/>
+    </context>
+    <steps>
+      <step>
+        <cmd>Arrange your Webcam, Microphone, and Screen sources as needed.</cmd>
+      </step>
+      <step>
+        <cmd>Check that the microphone level meter moves when you speak.</cmd>
+      </step>
+      <step>
+        <cmd>Click <uicontrol>Record</uicontrol>.</cmd>
+      </step>
+      <step>
+        <cmd>Click <uicontrol>Stop</uicontrol> when finished.</cmd>
+      </step>
+    </steps>
+    <result>The recording is saved to your Videos folder.</result>
+  </taskbody>
+</task>

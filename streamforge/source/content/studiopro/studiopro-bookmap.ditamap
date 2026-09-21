@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd">
+<bookmap id="studiopro-bookmap">
+  <booktitle>
+    <mainbooktitle>StreamForge Studio Pro</mainbooktitle>
+  </booktitle>
+  <bookmeta>
+    <author>StreamForge Creator Suite Documentation Project</author>
+    <bookrights>
+      <copyrfirst><year>2026</year></copyrfirst>
+      <bookowner><person>StreamForge Creator Suite Documentation Project</person></bookowner>
+    </bookrights>
+  </bookmeta>
+
+  <frontmatter>
+    <notices>
+      <topicref href="../common/topics/c-notices.dita"/>
+    </notices>
+    <mapref href="../common/common.ditamap" processing-role="resource-only"/>
+  </frontmatter>
+
+
+  <chapter href="../obs/topics/c-interface-overview.dita"/>
+  <chapter href="../obs/topics/r-system-requirements-obs.dita"/>
+
+  <chapter href="../obs/topics/c-scenes-and-sources.dita">
+    <topicref href="../obs/topics/t-source-display-capture.dita"/>
+    <topicref href="../obs/topics/t-source-window-capture.dita"/>
+    <topicref href="../obs/topics/t-source-game-capture.dita"/>
+  </chapter>
+
+  <chapter href="topics/t-multicam-switching.dita" keys="studiopro-multicam" otherprops="tier-pro"/>
+
+  <chapter href="../obs/topics/c-filters-overview.dita">
+    <topicref href="../obs/topics/t-filter-chroma-key.dita"/>
+    <topicref href="../obs/topics/t-filter-color-correction.dita"/>
+    <topicref href="../obs/topics/t-filter-noise-suppression.dita"/>
+  </chapter>
+
+  <chapter href="topics/c-advanced-overlays.dita" keys="studiopro-overlays" otherprops="tier-pro"/>
+
+  <chapter href="../obs/topics/t-recording.dita"/>
+  <chapter href="../obs/topics/t-streaming-setup.dita"/>
+  <chapter href="../obs/topics/c-transitions.dita"/>
+  <chapter href="../obs/topics/c-studio-mode.dita"/>
+  <chapter href="../obs/topics/t-virtual-camera.dita"/>
+  <chapter href="../obs/topics/r-settings-reference.dita"/>
+  <chapter href="../obs/topics/c-scene-collections-profiles.dita"/>
+  <chapter href="../obs/topics/r-hotkeys.dita"/>
+  <chapter href="../obs/topics/c-plugins-scripting.dita"/>
+
+  <chapter href="topics/c-team-collaboration.dita" keys="studiopro-collaboration" otherprops="tier-pro"/>
+
+  <chapter href="../common/topics/c-account-licensing.dita"/>
+  <chapter href="topics/c-license-activation-studiopro.dita"/>
+
+  <chapter href="../common/topics/c-support-contact.dita"/>
+
+  <appendices>
+    <appendix href="../obs/topics/r-appendix-cli-args.dita"/>
+    <appendix href="../obs/topics/r-appendix-file-formats.dita"/>
+    <appendix navtitle="Troubleshooting">
+      <topicref href="../obs/topics/ts-troubleshoot-no-audio.dita"/>
+      <topicref href="../obs/topics/ts-troubleshoot-dropped-frames.dita"/>
+    </appendix>
+  </appendices>
+</bookmap>

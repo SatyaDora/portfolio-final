@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="what-is-a-scene" otherprops="fa-capture">
+  <title>What Is a Scene?</title>
+  <shortdesc>A scene is a saved arrangement of sources that you can switch to instantly.</shortdesc>
+  <conbody>
+    <p id="scene-def">A <b>scene</b> is a named collection of one or more
+      <i>sources</i>&#8212;windows, cameras, images, or other on-screen elements&#8212;arranged
+      together on a canvas. Switching scenes changes everything visible on screen at once,
+      instead of repositioning sources one at a time.</p>
+    <p id="scene-def-short">In short: sources are the pieces, a scene is the arrangement.</p>
+    <p id="scene-multi">Most products let you build multiple scenes ahead of time and
+      switch between them during a session or recording.</p>
+  </conbody>
+</concept>

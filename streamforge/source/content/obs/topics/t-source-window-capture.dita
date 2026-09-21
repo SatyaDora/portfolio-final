@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="source-window-capture" otherprops="fa-capture">
+  <title>Adding a Window Capture Source</title>
+  <shortdesc>Capture a single application window instead of the whole screen.</shortdesc>
+  <taskbody>
+    <context>
+      <p>Window Capture follows one window even if you move or resize it, and unlike
+        Display Capture it won't show anything from other applications layered on
+        top.</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>In the Sources panel, click <uicontrol>+</uicontrol> and choose
+          <uicontrol>Window Capture</uicontrol>.</cmd>
+      </step>
+      <step>
+        <cmd>Select the target application from the <uicontrol>Window</uicontrol>
+          dropdown.</cmd>
+        <info>The target application must already be running.</info>
+      </step>
+      <step>
+        <cmd>Choose a capture method if prompted.</cmd>
+        <info>Most modern applications work with the default method; older or
+          hardware-accelerated applications sometimes need an alternate capture
+          method to render correctly.</info>
+      </step>
+    </steps>
+    <result>The chosen window appears in the scene and continues updating even if the
+      window is minimized behind other windows (though not while fully
+      minimized).</result>
+  </taskbody>
+</task>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="settings-reference" otherprops="fa-capture fa-audio fa-streaming">
+  <title>Full Settings Reference</title>
+  <shortdesc>Every settings category in OBS Studio and what it controls.</shortdesc>
+  <refbody>
+    <section id="settings-general">
+      <title>General</title>
+      <p>Theme, language, confirmation prompts on exit, and system tray behavior.</p>
+    </section>
+    <section id="settings-stream">
+      <title>Stream</title>
+      <p>Streaming service selection, ingest server, and stream key.</p>
+    </section>
+    <section id="settings-output">
+      <title>Output</title>
+      <p>Encoder selection, bitrate, recording format and path, and replay buffer
+        length. Available in Simple or Advanced mode.</p>
+    </section>
+    <section id="settings-audio">
+      <title>Audio</title>
+      <p>Sample rate, channel layout, and up to four global audio devices in addition
+        to per-source audio.</p>
+    </section>
+    <section id="settings-video">
+      <title>Video</title>
+      <p>Base (canvas) and output (scaled) resolution, downscale filter, and common and
+        integer FPS values.</p>
+    </section>
+    <section id="settings-hotkeys">
+      <title>Hotkeys</title>
+      <p>Global keyboard shortcuts for scene switching, recording, streaming, muting,
+        and more. See <xref href="r-hotkeys.dita" scope="local">Hotkeys</xref> for the
+        default bindings.</p>
+    </section>
+    <section id="settings-advanced">
+      <title>Advanced</title>
+      <p>Process priority, color format and space, network buffering, and automatic
+        recovery settings for dropped frames.</p>
+    </section>
+  </refbody>
+</reference>

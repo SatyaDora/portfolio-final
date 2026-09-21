@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="license-activation-studiopro" otherprops="tier-pro fa-collaboration">
+  <title>License Activation</title>
+  <shortdesc>How Studio Pro's Pro-exclusive features unlock.</shortdesc>
+  <conbody>
+    <p conkeyref="account-licensing/license-activation-para"/>
+    <p>Until activation completes, Studio Pro runs with Multi-Camera Switching, Advanced
+      Overlays, and Team Collaboration disabled, and behaves like StreamForge Capture
+      with the full OBS Studio-style scene and filter model still available.</p>
+  </conbody>
+</concept>

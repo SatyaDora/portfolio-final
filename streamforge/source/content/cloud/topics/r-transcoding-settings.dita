@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="transcoding-settings" otherprops="tier-free">
+  <title>Transcoding Settings Reference</title>
+  <shortdesc>What happens to a recording after you upload it, and what you can
+    control.</shortdesc>
+  <refbody>
+    <section id="auto-transcode">
+      <title>Automatic renditions</title>
+      <p>Every upload is automatically transcoded into 1080p, 720p, and 480p renditions
+        so viewers get a resolution matching their connection.</p>
+    </section>
+    <section id="pro-transcode">
+      <title>Pro-tier options</title>
+      <p>Pro accounts can additionally request a 4K rendition (source permitting) and
+        can disable the lower renditions to save storage.</p>
+    </section>
+  </refbody>
+</reference>

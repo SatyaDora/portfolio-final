@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map id="obs-map">
+  <title>OBS Studio</title>
+
+  <!-- Pull common content keys into this scope for conkeyref, without adding them to nav -->
+  <mapref href="../common/common.ditamap" processing-role="resource-only"/>
+
+  <topicref href="topics/c-interface-overview.dita"/>
+  <topicref href="topics/t-installing-obs.dita"/>
+  <topicref href="topics/r-system-requirements-obs.dita" keys="system-requirements-obs"/>
+
+  <topicref href="topics/c-scenes-and-sources.dita">
+    <topicref href="topics/t-source-display-capture.dita"/>
+    <topicref href="topics/t-source-window-capture.dita"/>
+    <topicref href="topics/t-source-game-capture.dita" keys="obs-game-capture"/>
+  </topicref>
+
+  <topicref href="topics/c-filters-overview.dita">
+    <topicref href="topics/t-filter-chroma-key.dita" keys="obs-filter-chroma-key"/>
+    <topicref href="topics/t-filter-color-correction.dita"/>
+    <topicref href="topics/t-filter-noise-suppression.dita"/>
+  </topicref>
+
+  <topicref href="topics/t-recording.dita" keys="obs-recording"/>
+  <topicref href="topics/t-streaming-setup.dita"/>
+  <topicref href="topics/c-transitions.dita"/>
+  <topicref href="topics/c-studio-mode.dita"/>
+  <topicref href="topics/t-virtual-camera.dita"/>
+  <topicref href="topics/r-settings-reference.dita"/>
+  <topicref href="topics/c-scene-collections-profiles.dita"/>
+  <topicref href="topics/r-hotkeys.dita" keys="hotkeys-obs"/>
+  <topicref href="topics/c-plugins-scripting.dita" keys="plugins-scripting-obs"/>
+
+  <topicref navtitle="Appendices">
+    <topicref href="topics/r-appendix-cli-args.dita"/>
+    <topicref href="topics/r-appendix-file-formats.dita"/>
+  </topicref>
+
+  <topicref navtitle="Troubleshooting">
+    <topicref href="topics/ts-troubleshoot-no-audio.dita"/>
+    <topicref href="topics/ts-troubleshoot-dropped-frames.dita" keys="obs-ts-dropped-frames"/>
+  </topicref>
+
+  <!-- Account/Licensing does not apply to OBS Studio itself (no cloud account needed to
+       run the desktop app standalone), so it is intentionally NOT included here. -->
+  <topicref href="../common/topics/c-support-contact.dita"/>
+
+</map>

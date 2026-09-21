@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map id="cloud-map">
+  <title>StreamForge Cloud</title>
+
+  <mapref href="../common/common.ditamap" processing-role="resource-only"/>
+
+  <topicref href="../common/topics/c-account-licensing.dita"/>
+  <topicref href="topics/r-system-requirements-cloud.dita"/>
+  <topicref href="topics/t-uploading-recording.dita"/>
+  <topicref href="topics/t-sharing-permissions.dita"/>
+  <topicref href="topics/r-transcoding-settings.dita"/>
+  <topicref href="../common/topics/c-support-contact.dita"/>
+
+</map>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="scenes-and-sources" otherprops="fa-capture">
+  <title>Scenes and Sources</title>
+  <shortdesc>How OBS Studio's scene and source model works.</shortdesc>
+  <conbody>
+    <p conkeyref="what-is-a-scene/scene-def"/>
+    <p conkeyref="what-is-a-scene/scene-multi"/>
+    <p>OBS Studio supports eleven source types, covering screen and window capture, game
+      capture, camera and audio devices, images, media files, browser content, text,
+      solid color, slideshows, and VLC-based playlists. Each source type has its own
+      properties dialog with settings specific to that source.</p>
+    <p>Sources can be resized, cropped, and layered within a scene using the same
+      transform handles regardless of source type, and the same source can be reused
+      across multiple scenes without duplicating its underlying capture.</p>
+  </conbody>
+</concept>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="multicam-switching" otherprops="tier-pro fa-capture">
+  <title>Multi-Camera Switching</title>
+  <shortdesc>Switch live between multiple camera sources with dedicated preview
+    tiles.</shortdesc>
+  <taskbody>
+    <context>
+      <p>The Multi-Camera panel shows a live preview tile for every camera source in the
+        current scene at once, letting you cut between them without hunting through the
+        Sources list.</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Open the <uicontrol>Multi-Camera</uicontrol> panel from the
+          <uicontrol>Docks</uicontrol> menu.</cmd>
+      </step>
+      <step>
+        <cmd>Assign a numbered slot to each camera source you want quick access
+          to.</cmd>
+      </step>
+      <step>
+        <cmd>Click a tile, or press its assigned number key, to bring that camera to
+          Program.</cmd>
+      </step>
+    </steps>
+    <result>The selected camera becomes the active video source with the currently
+      configured transition.</result>
+  </taskbody>
+</task>

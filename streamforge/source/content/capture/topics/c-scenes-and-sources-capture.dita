@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="scenes-and-sources-capture" otherprops="fa-capture tier-free">
+  <title>Scenes and Sources</title>
+  <shortdesc>StreamForge Capture's simplified scene and source model.</shortdesc>
+  <conbody>
+    <p conkeyref="what-is-a-scene/scene-def"/>
+    <p conkeyref="what-is-a-scene/scene-def-short"/>
+    <p>StreamForge Capture deliberately supports only three source types&#8212;Webcam,
+      Microphone, and Screen&#8212;compared to OBS Studio's eleven. There are no filters
+      and no scripting; sources are added, resized, and arranged, and that's the whole
+      model.</p>
+    <p>Capture also supports only one scene at a time rather than a saved collection of
+      scenes, since its target use case is a single always-the-same webcam layout rather
+      than switching between multiple setups.</p>
+  </conbody>
+</concept>

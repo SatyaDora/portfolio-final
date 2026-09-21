@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd">
+<bookmap id="capture-bookmap">
+  <booktitle>
+    <mainbooktitle>StreamForge Capture</mainbooktitle>
+  </booktitle>
+  <bookmeta>
+    <author>StreamForge Creator Suite Documentation Project</author>
+    <bookrights>
+      <copyrfirst><year>2026</year></copyrfirst>
+      <bookowner><person>StreamForge Creator Suite Documentation Project</person></bookowner>
+    </bookrights>
+  </bookmeta>
+
+  <frontmatter>
+    <notices>
+      <topicref href="../common/topics/c-notices.dita"/>
+    </notices>
+    <mapref href="../common/common.ditamap" processing-role="resource-only"/>
+  </frontmatter>
+
+
+  <chapter href="topics/t-installing-capture.dita"/>
+  <chapter href="topics/r-system-requirements-capture.dita"/>
+  <chapter href="topics/c-scenes-and-sources-capture.dita"/>
+  <chapter href="topics/t-recording-capture.dita" keys="capture-recording"/>
+  <chapter href="topics/t-upgrade-to-studiopro.dita" keys="capture-upgrade-studiopro"/>
+  <chapter href="../common/topics/c-support-contact.dita"/>
+</bookmap>

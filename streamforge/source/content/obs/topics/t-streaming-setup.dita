@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="streaming-setup" otherprops="fa-streaming">
+  <title>Setting Up Streaming</title>
+  <shortdesc>Connect OBS Studio to a streaming service using RTMP.</shortdesc>
+  <taskbody>
+    <context>
+      <p>OBS Studio streams to any service that accepts an RTMP or RTMPS ingest URL and
+        stream key. The steps below use the generic <uicontrol>Custom...</uicontrol>
+        service option, which works with any RTMP-compatible platform.</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Open <uicontrol>Settings &gt; Stream</uicontrol>.</cmd>
+      </step>
+      <step>
+        <cmd>Set <uicontrol>Service</uicontrol> to <uicontrol>Custom...</uicontrol>, or
+          select your platform if it's listed by name.</cmd>
+      </step>
+      <step>
+        <cmd>Enter the <uicontrol>Server</uicontrol> (RTMP ingest URL) provided by your
+          streaming platform.</cmd>
+      </step>
+      <step>
+        <cmd>Paste your platform's <uicontrol>Stream Key</uicontrol> into the Stream Key
+          field.</cmd>
+        <info>
+          <note type="caution">Treat your stream key like a password. Anyone with it can
+            stream to your channel.</note>
+        </info>
+      </step>
+      <step>
+        <cmd>Click <uicontrol>Apply</uicontrol>, then <uicontrol>Start
+          Streaming</uicontrol> from the Controls panel.</cmd>
+      </step>
+    </steps>
+  </taskbody>
+</task>

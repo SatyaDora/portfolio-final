@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="pairing-desktop" otherprops="fa-capture tier-free">
+  <title>Pairing with a Desktop Product</title>
+  <shortdesc>Connect StreamForge Mobile to OBS Studio, StreamForge Capture, or
+    StreamForge Studio Pro on the same network.</shortdesc>
+  <taskbody>
+    <prereq>The phone and the computer running the desktop product must be on the same
+      Wi-Fi network, and the desktop product must be running.</prereq>
+    <steps>
+      <step>
+        <cmd>On the desktop product, open its companion pairing menu and note the
+          six-digit pairing code shown.</cmd>
+      </step>
+      <step>
+        <cmd>In StreamForge Mobile, tap <uicontrol>Pair New Device</uicontrol>.</cmd>
+      </step>
+      <step>
+        <cmd>Enter the six-digit code.</cmd>
+      </step>
+    </steps>
+    <result>The phone appears as an available camera and remote-control source in the
+      desktop product, and the desktop product's scenes appear on the phone for remote
+      monitoring.</result>
+  </taskbody>
+</task>

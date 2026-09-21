@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="source-game-capture" otherprops="fa-capture">
+  <title>Adding a Game Capture Source</title>
+  <shortdesc>Capture a game at full frame rate with lower overhead than Window
+    Capture.</shortdesc>
+  <taskbody>
+    <context>
+      <p>Game Capture hooks directly into a game's rendering pipeline, which usually
+        performs better than Window Capture for full-screen or borderless games.</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>In the Sources panel, click <uicontrol>+</uicontrol> and choose
+          <uicontrol>Game Capture</uicontrol>.</cmd>
+      </step>
+      <step>
+        <cmd>Set <uicontrol>Mode</uicontrol> to <uicontrol>Capture specific
+          window</uicontrol> or <uicontrol>Capture any fullscreen
+          application</uicontrol>.</cmd>
+      </step>
+      <step>
+        <cmd>Launch or switch to the game.</cmd>
+      </step>
+      <step importance="optional">
+        <cmd>Enable <uicontrol>Allow Transparency</uicontrol> if the game renders with
+          an alpha channel and you need overlays to show through correctly.</cmd>
+      </step>
+    </steps>
+    <result>The game's output appears in the scene once OBS detects a matching
+      window.</result>
+    <postreq>See <xref href="../../obs/topics/ts-troubleshoot-dropped-frames.dita"
+      scope="local">Troubleshooting: Dropped Frames</xref> if capture is choppy.</postreq>
+  </taskbody>
+</task>

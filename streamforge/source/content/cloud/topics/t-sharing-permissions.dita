@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="sharing-permissions" otherprops="tier-free">
+  <title>Sharing and Permissions</title>
+  <shortdesc>Control who can view or download an uploaded recording.</shortdesc>
+  <taskbody>
+    <steps>
+      <step>
+        <cmd>Open a recording in your library and click <uicontrol>Share</uicontrol>.</cmd>
+      </step>
+      <step>
+        <cmd>Choose a visibility level: <uicontrol>Private</uicontrol>,
+          <uicontrol>Unlisted</uicontrol> (anyone with the link), or
+          <uicontrol>Public</uicontrol> (listed on your profile).</cmd>
+      </step>
+      <step importance="optional">
+        <cmd>Toggle <uicontrol>Allow Download</uicontrol> to let viewers save the file
+          locally.</cmd>
+      </step>
+      <step importance="optional">
+        <cmd>Invite specific collaborators by email to grant edit access.</cmd>
+        <info>Inviting collaborators with edit access is a Pro-tier feature.</info>
+      </step>
+    </steps>
+  </taskbody>
+</task>

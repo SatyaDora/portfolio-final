@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="recording" otherprops="fa-capture">
+  <title>Recording a Video</title>
+  <shortdesc>Record your current scene to a local video file.</shortdesc>
+  <taskbody>
+    <context>
+      <p conkeyref="recording-intro-shared/recording-intro-para"/>
+    </context>
+    <steps>
+      <step>
+        <cmd>Build the scene you want to record and confirm it's selected.</cmd>
+      </step>
+      <step>
+        <cmd>Check the Audio Mixer to confirm the correct microphone and desktop audio
+          sources are unmuted at reasonable levels.</cmd>
+      </step>
+      <step>
+        <cmd>Click <uicontrol>Start Recording</uicontrol> in the Controls panel.</cmd>
+      </step>
+      <step>
+        <cmd>Perform the actions you want captured.</cmd>
+      </step>
+      <step>
+        <cmd>Click <uicontrol>Stop Recording</uicontrol> when finished.</cmd>
+      </step>
+    </steps>
+    <result>The recording is saved to the output folder configured in
+      <uicontrol>Settings &gt; Output</uicontrol>.</result>
+  </taskbody>
+</task>

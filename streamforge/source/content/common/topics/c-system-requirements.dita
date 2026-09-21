@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="system-requirements-common">
+  <title>System Requirements</title>
+  <shortdesc>Minimum and recommended specifications, shared framing used by every
+    StreamForge product's own requirements page.</shortdesc>
+  <refbody>
+    <section id="sysreq-intro">
+      <p id="sysreq-intro-para">These are minimums for a stable experience. Streaming or
+        recording at higher resolutions, frame rates, or bitrates, or running multiple
+        StreamForge products at once, will require more than the minimum.</p>
+    </section>
+  </refbody>
+</reference>

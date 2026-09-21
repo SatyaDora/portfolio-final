@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="interface-overview" otherprops="fa-capture">
+  <title>Interface Overview</title>
+  <shortdesc>A tour of the main OBS Studio window and where each panel lives.</shortdesc>
+  <conbody>
+    <p>The default OBS Studio layout has five main areas: the <b>Preview</b> pane showing
+      your current scene, the <b>Scenes</b> list, the <b>Sources</b> list for the selected
+      scene, the <b>Audio Mixer</b>, and the <b>Controls</b> panel with Start
+      Recording/Streaming buttons.</p>
+    <ul>
+      <li><b>Scenes panel</b> — every saved scene in the current scene collection.</li>
+      <li><b>Sources panel</b> — the sources that make up whichever scene is selected.</li>
+      <li><b>Audio Mixer</b> — a volume fader and mute button per audio source.</li>
+      <li><b>Controls</b> — Start/Stop Streaming, Start/Stop Recording, Settings, Exit.</li>
+    </ul>
+    <p>Panels can be undocked, resized, or hidden from the <tt>Docks</tt> menu, and the
+      whole layout can be saved and restored independently per scene collection.</p>
+  </conbody>
+</concept>

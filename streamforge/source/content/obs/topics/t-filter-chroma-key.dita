@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="filter-chroma-key" otherprops="fa-capture">
+  <title>Applying a Chroma Key Filter</title>
+  <shortdesc>Remove a solid-color background from a camera source.</shortdesc>
+  <taskbody>
+    <prereq>A single, evenly lit solid-color backdrop behind the subject.</prereq>
+    <steps>
+      <step>
+        <cmd>Right-click the camera source and choose <uicontrol>Filters</uicontrol>.</cmd>
+      </step>
+      <step>
+        <cmd>Under Video Filters, click <uicontrol>+</uicontrol> and choose <uicontrol>
+          Chroma Key</uicontrol>.</cmd>
+      </step>
+      <step>
+        <cmd>Set <uicontrol>Key Color Type</uicontrol> to match your backdrop
+          color.</cmd>
+      </step>
+      <step>
+        <cmd>Adjust <uicontrol>Similarity</uicontrol> and <uicontrol>Smoothness</uicontrol>
+          until the background disappears cleanly without eating into the
+          subject.</cmd>
+      </step>
+    </steps>
+    <result>The backdrop becomes transparent, letting whatever is in scenes beneath it
+      show through.</result>
+  </taskbody>
+</task>

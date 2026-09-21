@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="transitions" otherprops="fa-capture">
+  <title>Transitions</title>
+  <shortdesc>Control how OBS Studio animates the change from one scene to
+    another.</shortdesc>
+  <conbody>
+    <p>A transition plays whenever you switch the active scene. OBS Studio ships with
+      several built-in transitions:</p>
+    <dl>
+      <dlentry>
+        <dt>Cut</dt>
+        <dd>Instant switch with no animation.</dd>
+      </dlentry>
+      <dlentry>
+        <dt>Fade</dt>
+        <dd>Crossfades from the old scene to the new one over a configurable
+          duration.</dd>
+      </dlentry>
+      <dlentry>
+        <dt>Stinger</dt>
+        <dd>Plays a short video clip, typically with a transparent or matte section, to
+          cover the switch.</dd>
+      </dlentry>
+      <dlentry>
+        <dt>Luma Wipe</dt>
+        <dd>Uses a grayscale image to control the wipe pattern between scenes.</dd>
+      </dlentry>
+    </dl>
+    <p>The default transition and its duration are set from the dropdown and duration
+      field between the Scenes and Sources panels, and can be overridden per scene using
+      Quick Transitions.</p>
+  </conbody>
+</concept>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="filter-noise-suppression" otherprops="fa-audio">
+  <title>Applying a Noise Suppression Filter</title>
+  <shortdesc>Reduce steady background hiss or fan noise on a microphone
+    source.</shortdesc>
+  <taskbody>
+    <steps>
+      <step>
+        <cmd>Right-click the microphone source in the Audio Mixer and choose
+          <uicontrol>Filters</uicontrol>.</cmd>
+      </step>
+      <step>
+        <cmd>Click <uicontrol>+</uicontrol> and choose <uicontrol>Noise
+          Suppression</uicontrol>.</cmd>
+      </step>
+      <step>
+        <cmd>Choose a suppression method and set the suppression level in
+          decibels.</cmd>
+        <info>Start around -30 dB and adjust while monitoring audio, since too
+          aggressive a setting can make speech sound muffled.</info>
+      </step>
+      <step importance="optional">
+        <cmd>Add a <uicontrol>Noise Gate</uicontrol> filter above it to fully mute the
+          mic below a volume threshold.</cmd>
+      </step>
+    </steps>
+  </taskbody>
+</task>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map id="mobile-map">
+  <title>StreamForge Mobile</title>
+
+  <mapref href="../common/common.ditamap" processing-role="resource-only"/>
+
+  <topicref href="topics/t-installing-mobile.dita"/>
+  <topicref href="topics/r-system-requirements-mobile.dita"/>
+  <topicref href="topics/t-pairing-desktop.dita" keys="mobile-pairing-desktop"/>
+  <topicref href="topics/t-remote-camera-control.dita"/>
+  <topicref href="topics/t-monitoring-live-session.dita"/>
+  <topicref href="../common/topics/c-account-licensing.dita"/>
+  <topicref href="../common/topics/c-support-contact.dita"/>
+
+</map>

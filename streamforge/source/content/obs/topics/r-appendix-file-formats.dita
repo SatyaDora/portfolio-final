@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="appendix-file-formats" otherprops="fa-capture">
+  <title>Appendix: Supported File Formats</title>
+  <shortdesc>Recording container and image formats OBS Studio can write or read.</shortdesc>
+  <refbody>
+    <section id="recording-formats">
+      <title>Recording containers</title>
+      <p>MP4, MOV, MKV, FLV, TS, and hybrid MP4 (a self-repairing variant recommended when
+        recording long, unattended sessions).</p>
+    </section>
+    <section id="image-formats">
+      <title>Image source formats</title>
+      <p>PNG, JPG, BMP, GIF (including animated GIF playback), and TGA.</p>
+    </section>
+  </refbody>
+</reference>

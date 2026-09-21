@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="notices">
+  <title>Notices</title>
+  <shortdesc>What's real and what's invented in this documentation set.</shortdesc>
+  <conbody>
+    <p>This documentation set is an unofficial, independent sample project built to
+      demonstrate DITA content-reuse and taxonomy techniques. It is not affiliated with,
+      endorsed by, or sponsored by any of the organizations behind the real product
+      named below.</p>
+    <p><b>OBS Studio</b> is a real, free and open-source software project. Its name and
+      general feature set are used here factually, but this documentation is an
+      independent sample, not the official OBS Studio manual.</p>
+    <p>The following four products&#8212;<b>StreamForge Capture</b>,
+      <b>StreamForge Cloud</b>, <b>StreamForge Mobile</b>, and <b>StreamForge Studio
+      Pro</b>&#8212;along with the umbrella name <b>StreamForge Creator Suite</b>, are
+      entirely fictional. They were invented for this exercise to provide realistic
+      multi-product scenarios for content reuse, taxonomy, and key-scoped map
+      architecture. No such products exist.</p>
+  </conbody>
+</concept>

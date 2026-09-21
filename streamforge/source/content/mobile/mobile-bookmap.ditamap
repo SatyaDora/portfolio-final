@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd">
+<bookmap id="mobile-bookmap">
+  <booktitle>
+    <mainbooktitle>StreamForge Mobile</mainbooktitle>
+  </booktitle>
+  <bookmeta>
+    <author>StreamForge Creator Suite Documentation Project</author>
+    <bookrights>
+      <copyrfirst><year>2026</year></copyrfirst>
+      <bookowner><person>StreamForge Creator Suite Documentation Project</person></bookowner>
+    </bookrights>
+  </bookmeta>
+
+  <frontmatter>
+    <notices>
+      <topicref href="../common/topics/c-notices.dita"/>
+    </notices>
+    <mapref href="../common/common.ditamap" processing-role="resource-only"/>
+  </frontmatter>
+
+
+  <chapter href="topics/t-installing-mobile.dita"/>
+  <chapter href="topics/r-system-requirements-mobile.dita"/>
+  <chapter href="topics/t-pairing-desktop.dita" keys="mobile-pairing-desktop"/>
+  <chapter href="topics/t-remote-camera-control.dita"/>
+  <chapter href="topics/t-monitoring-live-session.dita"/>
+  <chapter href="../common/topics/c-account-licensing.dita"/>
+  <chapter href="../common/topics/c-support-contact.dita"/>
+</bookmap>

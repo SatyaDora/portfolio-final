@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="filters-overview" otherprops="fa-capture fa-audio">
+  <title>Filters Overview</title>
+  <shortdesc>Filters modify a single source's video or audio without affecting the rest
+    of the scene.</shortdesc>
+  <conbody>
+    <p>Filters are attached to an individual source (or to a scene, for scene-wide
+      effects) and are applied in order from top to bottom of the filter list. Video
+      filters and audio filters are listed separately because a source can have both at
+      once.</p>
+    <p>Common video filters include Chroma Key, Color Correction, Sharpen, Crop/Pad,
+      Scroll, and LUT application. Common audio filters include Noise Suppression, Noise
+      Gate, Compressor, and Limiter.</p>
+    <note>Filter order matters. For example, a Crop/Pad filter placed before a Chroma Key
+      filter crops the image before the key is calculated; placed after, it crops the
+      already-keyed result.</note>
+  </conbody>
+</concept>

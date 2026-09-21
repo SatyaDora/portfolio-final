@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map id="studiopro-map">
+  <title>StreamForge Studio Pro</title>
+
+  <mapref href="../common/common.ditamap" processing-role="resource-only"/>
+
+  <!-- Studio Pro is built on the same engine as OBS Studio, so its core feature set is
+       the actual OBS Studio topic set, reused wholesale rather than re-authored. This is
+       the large-scale, map-level content reuse the OBS Studio Studio Pro relationship is
+       built to demonstrate. -->
+  <topicref href="../obs/topics/c-interface-overview.dita" keys="studiopro-overview"/>
+  <topicref href="../obs/topics/r-system-requirements-obs.dita"/>
+
+  <topicref href="../obs/topics/c-scenes-and-sources.dita">
+    <topicref href="../obs/topics/t-source-display-capture.dita"/>
+    <topicref href="../obs/topics/t-source-window-capture.dita"/>
+    <topicref href="../obs/topics/t-source-game-capture.dita"/>
+  </topicref>
+
+  <topicref href="topics/t-multicam-switching.dita" keys="studiopro-multicam" otherprops="tier-pro"/>
+
+  <topicref href="../obs/topics/c-filters-overview.dita">
+    <topicref href="../obs/topics/t-filter-chroma-key.dita"/>
+    <topicref href="../obs/topics/t-filter-color-correction.dita"/>
+    <topicref href="../obs/topics/t-filter-noise-suppression.dita"/>
+  </topicref>
+
+  <topicref href="topics/c-advanced-overlays.dita" keys="studiopro-overlays" otherprops="tier-pro"/>
+
+  <topicref href="../obs/topics/t-recording.dita"/>
+  <topicref href="../obs/topics/t-streaming-setup.dita"/>
+  <topicref href="../obs/topics/c-transitions.dita"/>
+  <topicref href="../obs/topics/c-studio-mode.dita"/>
+  <topicref href="../obs/topics/t-virtual-camera.dita"/>
+  <topicref href="../obs/topics/r-settings-reference.dita"/>
+  <topicref href="../obs/topics/c-scene-collections-profiles.dita"/>
+  <topicref href="../obs/topics/r-hotkeys.dita"/>
+  <topicref href="../obs/topics/c-plugins-scripting.dita"/>
+
+  <topicref href="topics/c-team-collaboration.dita" keys="studiopro-collaboration" otherprops="tier-pro"/>
+
+  <topicref href="../common/topics/c-account-licensing.dita"/>
+  <topicref href="topics/c-license-activation-studiopro.dita"/>
+
+  <topicref navtitle="Appendices">
+    <topicref href="../obs/topics/r-appendix-cli-args.dita"/>
+    <topicref href="../obs/topics/r-appendix-file-formats.dita"/>
+  </topicref>
+
+  <topicref navtitle="Troubleshooting">
+    <topicref href="../obs/topics/ts-troubleshoot-no-audio.dita"/>
+    <topicref href="../obs/topics/ts-troubleshoot-dropped-frames.dita"/>
+  </topicref>
+
+  <topicref href="../common/topics/c-support-contact.dita"/>
+
+</map>

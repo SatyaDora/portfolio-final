@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="support-contact">
+  <title>Support and Contact</title>
+  <shortdesc>How to reach StreamForge support, the same across every product in the
+    suite.</shortdesc>
+  <refbody>
+    <section id="support-channels">
+      <title>Support channels</title>
+      <simpletable relcolwidth="1* 2*">
+        <sthead>
+          <stentry>Channel</stentry>
+          <stentry>Use for</stentry>
+        </sthead>
+        <strow>
+          <stentry>Community forum</stentry>
+          <stentry>General questions, feature requests, troubleshooting help from other
+            users</stentry>
+        </strow>
+        <strow>
+          <stentry>Support ticket</stentry>
+          <stentry>Account, billing, and licensing issues</stentry>
+        </strow>
+        <strow>
+          <stentry>Status page</stentry>
+          <stentry>Checking whether StreamForge Cloud is experiencing an outage</stentry>
+        </strow>
+      </simpletable>
+    </section>
+    <section id="response-times">
+      <title>Response times</title>
+      <p>Free-tier requests are answered on a best-effort basis. Pro-tier accounts receive
+        priority queuing on support tickets.</p>
+    </section>
+  </refbody>
+</reference>

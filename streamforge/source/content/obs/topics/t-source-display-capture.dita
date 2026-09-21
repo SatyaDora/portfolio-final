@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="source-display-capture" otherprops="fa-capture">
+  <title>Adding a Display Capture Source</title>
+  <shortdesc>Capture an entire monitor as a source.</shortdesc>
+  <taskbody>
+    <context>
+      <p>Display Capture mirrors an entire monitor, including anything that appears on
+        top of other windows, such as notifications or cursor tooltips.</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>In the Sources panel, click the <uicontrol>+</uicontrol> button and choose
+          <uicontrol>Display Capture</uicontrol>.</cmd>
+      </step>
+      <step>
+        <cmd>Name the source and click <uicontrol>OK</uicontrol>.</cmd>
+      </step>
+      <step>
+        <cmd>Choose which monitor to capture from the <uicontrol>Display</uicontrol>
+          dropdown.</cmd>
+      </step>
+      <step>
+        <cmd>Optionally enable <uicontrol>Capture Cursor</uicontrol>.</cmd>
+        <info>Turn this off if you plan to add a separate, styled cursor overlay
+          later.</info>
+      </step>
+    </steps>
+    <result>The selected monitor appears in the current scene and updates live.</result>
+  </taskbody>
+</task>

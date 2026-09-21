@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd">
+<bookmap id="obs-bookmap">
+  <booktitle>
+    <mainbooktitle>OBS Studio</mainbooktitle>
+    <booktitlealt>An Independent Guide</booktitlealt>
+  </booktitle>
+  <bookmeta>
+    <author>StreamForge Creator Suite Documentation Project</author>
+    <bookrights>
+      <copyrfirst><year>2026</year></copyrfirst>
+      <bookowner><person>StreamForge Creator Suite Documentation Project</person></bookowner>
+    </bookrights>
+  </bookmeta>
+
+  <frontmatter>
+    <notices>
+      <topicref href="../common/topics/c-notices.dita"/>
+    </notices>
+    <mapref href="../common/common.ditamap" processing-role="resource-only"/>
+  </frontmatter>
+
+
+  <chapter href="topics/c-interface-overview.dita"/>
+  <chapter href="topics/t-installing-obs.dita"/>
+  <chapter href="topics/r-system-requirements-obs.dita" keys="system-requirements-obs"/>
+
+  <chapter href="topics/c-scenes-and-sources.dita">
+    <topicref href="topics/t-source-display-capture.dita"/>
+    <topicref href="topics/t-source-window-capture.dita"/>
+    <topicref href="topics/t-source-game-capture.dita" keys="obs-game-capture"/>
+  </chapter>
+
+  <chapter href="topics/c-filters-overview.dita">
+    <topicref href="topics/t-filter-chroma-key.dita" keys="obs-filter-chroma-key"/>
+    <topicref href="topics/t-filter-color-correction.dita"/>
+    <topicref href="topics/t-filter-noise-suppression.dita"/>
+  </chapter>
+
+  <chapter href="topics/t-recording.dita" keys="obs-recording"/>
+  <chapter href="topics/t-streaming-setup.dita"/>
+  <chapter href="topics/c-transitions.dita"/>
+  <chapter href="topics/c-studio-mode.dita"/>
+  <chapter href="topics/t-virtual-camera.dita"/>
+  <chapter href="topics/r-settings-reference.dita"/>
+  <chapter href="topics/c-scene-collections-profiles.dita"/>
+  <chapter href="topics/r-hotkeys.dita" keys="hotkeys-obs"/>
+  <chapter href="topics/c-plugins-scripting.dita" keys="plugins-scripting-obs"/>
+
+  <chapter href="../common/topics/c-support-contact.dita"/>
+
+  <appendices>
+    <appendix href="topics/r-appendix-cli-args.dita"/>
+    <appendix href="topics/r-appendix-file-formats.dita"/>
+    <appendix navtitle="Troubleshooting">
+      <topicref href="topics/ts-troubleshoot-no-audio.dita"/>
+      <topicref href="topics/ts-troubleshoot-dropped-frames.dita" keys="obs-ts-dropped-frames"/>
+    </appendix>
+  </appendices>
+</bookmap>

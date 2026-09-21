@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="scene-collections-profiles" otherprops="fa-capture">
+  <title>Scene Collections and Profiles</title>
+  <shortdesc>Two independent ways to save and switch entire setups at once.</shortdesc>
+  <conbody>
+    <p>A <b>scene collection</b> is the full set of scenes and sources you've built. A
+      <b>profile</b> is a full set of output, audio, and video settings. They're
+      independent: you can pair any scene collection with any profile, which is useful
+      when the same scenes need different output settings depending on where you're
+      streaming from.</p>
+    <p>Both are managed from their respective menus, support duplicating an existing one
+      as a starting point, and can be exported to a file and imported on another
+      machine.</p>
+  </conbody>
+</concept>

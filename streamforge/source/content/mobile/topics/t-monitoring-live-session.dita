@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="monitoring-live-session" otherprops="fa-streaming tier-free">
+  <title>Monitoring a Live Session</title>
+  <shortdesc>Watch your program output and audio levels from your phone while streaming
+    or recording.</shortdesc>
+  <taskbody>
+    <steps>
+      <step>
+        <cmd>With a device paired, tap <uicontrol>Monitor</uicontrol> in StreamForge
+          Mobile.</cmd>
+      </step>
+      <step>
+        <cmd>View the live program output, current scene name, elapsed recording or
+          stream time, and audio level meters.</cmd>
+      </step>
+      <step importance="optional">
+        <cmd>Tap a scene thumbnail to switch the desktop product to that scene
+          remotely.</cmd>
+      </step>
+    </steps>
+  </taskbody>
+</task>

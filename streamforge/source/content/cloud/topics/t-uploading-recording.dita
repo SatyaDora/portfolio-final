@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="uploading-recording" otherprops="tier-free">
+  <title>Uploading a Recording</title>
+  <shortdesc>Send a local recording from OBS Studio, Capture, or Studio Pro to
+    StreamForge Cloud.</shortdesc>
+  <taskbody>
+    <steps>
+      <step>
+        <cmd>Sign in to your StreamForge account at the Cloud web portal.</cmd>
+      </step>
+      <step>
+        <cmd>Click <uicontrol>Upload</uicontrol> and choose a video file from your
+          computer.</cmd>
+      </step>
+      <step>
+        <cmd>Wait for the upload progress bar to complete.</cmd>
+        <info>Upload speed depends on your connection, not on StreamForge Cloud.</info>
+      </step>
+      <step>
+        <cmd>Once uploaded, the recording begins transcoding automatically.</cmd>
+      </step>
+    </steps>
+    <result>The recording appears in your library once transcoding finishes, with a
+      shareable link available immediately.</result>
+  </taskbody>
+</task>

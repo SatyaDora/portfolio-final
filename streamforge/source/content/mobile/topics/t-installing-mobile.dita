@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="installing-mobile" otherprops="tier-free">
+  <title>Installing StreamForge Mobile</title>
+  <shortdesc>Install the StreamForge Mobile companion app on iOS or Android.</shortdesc>
+  <taskbody>
+    <steps>
+      <step>
+        <cmd>Open the App Store (iOS) or Google Play (Android) on your phone.</cmd>
+      </step>
+      <step>
+        <cmd>Search for <uicontrol>StreamForge Mobile</uicontrol> and install it.</cmd>
+      </step>
+      <step>
+        <cmd>Open the app and sign in with your StreamForge account.</cmd>
+      </step>
+    </steps>
+    <result>StreamForge Mobile opens to a pairing screen, ready to connect to a desktop
+      product on the same network.</result>
+  </taskbody>
+</task>

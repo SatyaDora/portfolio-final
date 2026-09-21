@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="upgrade-to-studiopro" otherprops="tier-pro fa-collaboration">
+  <title>Upgrading to Studio Pro</title>
+  <shortdesc>Move from StreamForge Capture's simple layout to StreamForge Studio Pro's
+    full scene, filter, and multi-camera toolset.</shortdesc>
+  <taskbody>
+    <context>
+      <p>StreamForge Studio Pro includes everything in StreamForge Capture, plus
+        unlimited scenes, filters, multi-camera switching, advanced overlays, and team
+        collaboration. Upgrading does not require reinstalling&#8212;Studio Pro reads
+        your existing Capture layout on first launch.</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Sign in to your StreamForge account and confirm your subscription includes
+          the Pro tier.</cmd>
+        <info>See <xref href="../../common/topics/c-account-licensing.dita"
+          scope="local">Account and Licensing</xref>.</info>
+      </step>
+      <step>
+        <cmd>Install StreamForge Studio Pro alongside, or in place of, StreamForge
+          Capture.</cmd>
+      </step>
+      <step>
+        <cmd>Launch Studio Pro and sign in with the same account.</cmd>
+      </step>
+    </steps>
+    <result>Your existing Webcam, Microphone, and Screen sources appear in a new scene,
+      and the full Pro feature set becomes available.</result>
+  </taskbody>
+</task>

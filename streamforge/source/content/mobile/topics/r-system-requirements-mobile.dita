@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="system-requirements-mobile" otherprops="fa-capture tier-free">
+  <title>System Requirements</title>
+  <shortdesc>Minimum phone OS versions for StreamForge Mobile.</shortdesc>
+  <refbody>
+    <section conkeyref="system-requirements-common/sysreq-intro"/>
+    <section id="mobile-sysreq-table">
+      <simpletable relcolwidth="1* 1*">
+        <sthead>
+          <stentry></stentry>
+          <stentry>Minimum version</stentry>
+        </sthead>
+        <strow>
+          <stentry>iOS</stentry>
+          <stentry>iOS 16</stentry>
+        </strow>
+        <strow>
+          <stentry>Android</stentry>
+          <stentry>Android 11</stentry>
+        </strow>
+      </simpletable>
+    </section>
+  </refbody>
+</reference>

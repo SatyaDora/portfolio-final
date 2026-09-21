@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="virtual-camera" otherprops="fa-capture">
+  <title>Using the Virtual Camera</title>
+  <shortdesc>Send your OBS Studio output to other applications as if it were a webcam.</shortdesc>
+  <taskbody>
+    <context>
+      <p>Virtual Camera makes OBS Studio's program output selectable as a camera source
+        inside video-calling and conferencing applications.</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Click <uicontrol>Start Virtual Camera</uicontrol> in the Controls
+          panel.</cmd>
+      </step>
+      <step>
+        <cmd>In your conferencing application, open its camera selection menu.</cmd>
+      </step>
+      <step>
+        <cmd>Choose <uicontrol>OBS Virtual Camera</uicontrol> as the video source.</cmd>
+      </step>
+    </steps>
+    <result>The application now shows whatever OBS Studio's Program output is
+      showing.</result>
+  </taskbody>
+</task>

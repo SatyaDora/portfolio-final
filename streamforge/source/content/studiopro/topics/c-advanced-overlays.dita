@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="advanced-overlays" otherprops="tier-pro fa-capture">
+  <title>Advanced Overlays</title>
+  <shortdesc>Data-driven overlays that update automatically during a session.</shortdesc>
+  <conbody>
+    <p>Advanced Overlays are template-based graphics&#8212;lower thirds, score bugs,
+      countdown timers, alert banners&#8212;that bind to live data sources such as a
+      clock, a manually-triggered counter, or an incoming webhook, instead of being
+      static images.</p>
+    <p>Overlay templates are edited in a visual layout tool and can be reused across
+      scenes, with per-scene overrides for the bound data source.</p>
+  </conbody>
+</concept>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="system-requirements-capture" otherprops="fa-capture tier-free">
+  <title>System Requirements</title>
+  <shortdesc>Minimum and recommended specifications for StreamForge Capture.</shortdesc>
+  <refbody>
+    <section conkeyref="system-requirements-common/sysreq-intro"/>
+    <section id="capture-sysreq-table">
+      <simpletable relcolwidth="1* 1* 1*">
+        <sthead>
+          <stentry></stentry>
+          <stentry>Minimum</stentry>
+          <stentry>Recommended</stentry>
+        </sthead>
+        <strow>
+          <stentry>OS</stentry>
+          <stentry>Windows 10 or macOS 12</stentry>
+          <stentry>Windows 11 or macOS 14+</stentry>
+        </strow>
+        <strow>
+          <stentry>RAM</stentry>
+          <stentry>2 GB</stentry>
+          <stentry>4 GB</stentry>
+        </strow>
+      </simpletable>
+    </section>
+  </refbody>
+</reference>

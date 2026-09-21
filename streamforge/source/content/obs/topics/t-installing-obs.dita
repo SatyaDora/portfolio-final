@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="installing-obs" otherprops="fa-capture">
+  <title>Installing OBS Studio</title>
+  <shortdesc>Download and install OBS Studio on Windows, macOS, or Linux.</shortdesc>
+  <taskbody>
+    <prereq>A 64-bit system meeting <xref href="r-system-requirements-obs.dita"
+      scope="local">System Requirements</xref>.</prereq>
+    <context>
+      <p>The installer differs slightly per platform, but the first-run experience is the
+        same everywhere: an Auto-Configuration Wizard benchmarks your hardware and proposes
+        starting output settings.</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Download the installer for your platform from the official OBS Studio
+          site.</cmd>
+        <info>
+          <dl>
+            <dlentry>
+              <dt>Windows</dt>
+              <dd>Run the <filepath>.exe</filepath> installer and accept the default
+                install location unless you have a reason to change it.</dd>
+            </dlentry>
+            <dlentry>
+              <dt>macOS</dt>
+              <dd>Open the <filepath>.dmg</filepath> and drag OBS Studio into
+                <filepath>Applications</filepath>.</dd>
+            </dlentry>
+            <dlentry>
+              <dt>Linux</dt>
+              <dd>Install via the distribution's package manager, Flatpak, or the official
+                PPA, depending on your distribution.</dd>
+            </dlentry>
+          </dl>
+        </info>
+      </step>
+      <step>
+        <cmd>Launch OBS Studio for the first time.</cmd>
+      </step>
+      <step>
+        <cmd>Complete the Auto-Configuration Wizard.</cmd>
+        <info>Choose <uicontrol>Optimize for recording</uicontrol> or
+          <uicontrol>Optimize for streaming</uicontrol> depending on your primary use, then
+          accept the benchmarked settings or adjust them.</info>
+      </step>
+    </steps>
+    <result>OBS Studio opens with a default scene collection and one empty scene, ready
+      for you to add sources.</result>
+  </taskbody>
+</task>

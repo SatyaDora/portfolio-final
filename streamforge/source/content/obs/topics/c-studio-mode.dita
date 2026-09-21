@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="studio-mode" otherprops="fa-capture">
+  <title>Studio Mode</title>
+  <shortdesc>Preview a scene privately before it goes live or into the
+    recording.</shortdesc>
+  <conbody>
+    <p>Studio Mode splits the preview into two panes: a private <b>Preview</b> pane on the
+      left where you can select and adjust a scene, and a <b>Program</b> pane on the right
+      showing exactly what's being recorded or streamed. Clicking <uicontrol>Transition
+      </uicontrol> swaps Preview into Program using the active transition.</p>
+    <p>This is useful for checking a scene's layout, testing a source, or lining up a
+      graphic before it becomes visible to your audience.</p>
+  </conbody>
+</concept>

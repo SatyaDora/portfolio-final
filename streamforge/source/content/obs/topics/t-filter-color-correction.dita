@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="filter-color-correction" otherprops="fa-capture">
+  <title>Applying a Color Correction Filter</title>
+  <shortdesc>Adjust brightness, contrast, saturation, and color balance of a
+    source.</shortdesc>
+  <taskbody>
+    <steps>
+      <step>
+        <cmd>Right-click the source and choose <uicontrol>Filters</uicontrol>.</cmd>
+      </step>
+      <step>
+        <cmd>Under Video Filters, click <uicontrol>+</uicontrol> and choose
+          <uicontrol>Color Correction</uicontrol>.</cmd>
+      </step>
+      <step>
+        <cmd>Adjust <uicontrol>Gamma</uicontrol>, <uicontrol>Contrast</uicontrol>,
+          <uicontrol>Brightness</uicontrol>, and <uicontrol>Saturation</uicontrol> to
+          taste.</cmd>
+      </step>
+      <step importance="optional">
+        <cmd>Use the color wheel to shift overall color tint.</cmd>
+      </step>
+    </steps>
+    <result>Changes apply live in the preview.</result>
+  </taskbody>
+</task>

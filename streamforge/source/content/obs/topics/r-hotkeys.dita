@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="hotkeys" otherprops="fa-capture">
+  <title>Hotkeys</title>
+  <shortdesc>Default global keyboard shortcuts, all of which are user-configurable.</shortdesc>
+  <refbody>
+    <section id="hotkeys-table">
+    <simpletable relcolwidth="1* 1*">
+      <sthead>
+        <stentry>Action</stentry>
+        <stentry>Default hotkey</stentry>
+      </sthead>
+      <strow>
+        <stentry>Start/Stop Streaming</stentry>
+        <stentry>Not bound by default</stentry>
+      </strow>
+      <strow>
+        <stentry>Start/Stop Recording</stentry>
+        <stentry>Not bound by default</stentry>
+      </strow>
+      <strow>
+        <stentry>Save Replay Buffer</stentry>
+        <stentry>Not bound by default</stentry>
+      </strow>
+      <strow>
+        <stentry>Switch to Scene 1-9</stentry>
+        <stentry>Not bound by default</stentry>
+      </strow>
+      <strow>
+        <stentry>Push-to-talk / Push-to-mute</stentry>
+        <stentry>Not bound by default</stentry>
+      </strow>
+    </simpletable>
+    <p>All hotkeys are unbound out of the box to avoid conflicting with other
+      applications; assign them from <uicontrol>Settings &gt; Hotkeys</uicontrol>.</p>
+    </section>
+  </refbody>
+</reference>

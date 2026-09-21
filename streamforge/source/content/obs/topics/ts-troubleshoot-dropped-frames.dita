@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="troubleshoot-dropped-frames" otherprops="fa-capture fa-streaming">
+  <title>Troubleshooting: Dropped Frames</title>
+  <shortdesc>The stream stutters, or the status bar reports dropped frames.</shortdesc>
+  <troublebody>
+    <condition>
+      <p>OBS Studio's status bar shows a percentage of frames dropped, and the resulting
+        stream or recording stutters or skips.</p>
+    </condition>
+    <troubleSolution>
+      <cause>
+        <p>Rendering frames dropped: the CPU or GPU cannot keep up with the chosen output
+          resolution, frame rate, or number of active sources and filters.</p>
+      </cause>
+      <remedy>
+        <responsibleParty>User</responsibleParty>
+        <steps>
+          <step>
+            <cmd>Lower the output resolution or frame rate in <uicontrol>Settings &gt;
+              Video</uicontrol>.</cmd>
+          </step>
+          <step>
+            <cmd>Reduce the number of active filters, especially GPU-intensive ones like
+              Chroma Key at high resolution.</cmd>
+          </step>
+          <step>
+            <cmd>Switch to a hardware encoder if currently using software (x264)
+              encoding.</cmd>
+          </step>
+        </steps>
+      </remedy>
+    </troubleSolution>
+    <troubleSolution>
+      <cause>
+        <p>Network frames dropped: the configured bitrate exceeds what the upload
+          connection can sustain, so the network buffer overflows and frames are
+          discarded before they reach the streaming service.</p>
+      </cause>
+      <remedy>
+        <responsibleParty>User</responsibleParty>
+        <steps>
+          <step>
+            <cmd>Run a real-world upload speed test, not just the number advertised by
+              your ISP.</cmd>
+          </step>
+          <step>
+            <cmd>Lower the streaming bitrate in <uicontrol>Settings &gt; Output</uicontrol>
+              to comfortably below your measured upload speed.</cmd>
+          </step>
+          <step>
+            <cmd>Enable <uicontrol>Automatically reconnect</uicontrol> and a dynamic
+              bitrate option if your encoder supports it.</cmd>
+          </step>
+        </steps>
+      </remedy>
+    </troubleSolution>
+  </troublebody>
+</troubleshooting>

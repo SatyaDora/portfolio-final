@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map id="common-content">
+  <title>StreamForge Common Content Pool</title>
+  <topicref href="topics/c-account-licensing.dita" keys="account-licensing"
+    processing-role="resource-only"/>
+  <topicref href="topics/c-recording-intro.dita" keys="recording-intro-shared"
+    processing-role="resource-only"/>
+  <topicref href="topics/c-what-is-a-scene.dita" keys="what-is-a-scene"
+    processing-role="resource-only"/>
+  <topicref href="topics/c-system-requirements.dita" keys="system-requirements-common"
+    processing-role="resource-only"/>
+  <topicref href="topics/c-support-contact.dita" keys="support-contact"
+    processing-role="resource-only"/>
+</map>

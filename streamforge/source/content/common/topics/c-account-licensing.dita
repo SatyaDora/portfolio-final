@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="account-licensing" otherprops="fa-collaboration">
+  <title>Account and Licensing</title>
+  <shortdesc>Every StreamForge product that touches the cloud shares one account and
+    licensing system.</shortdesc>
+  <conbody>
+    <section id="create-account">
+      <title>Creating your StreamForge account</title>
+      <p id="create-account-para">A StreamForge account is a single sign-on identity that
+        works across StreamForge Cloud, StreamForge Mobile, and StreamForge Studio Pro.
+        Create one at the StreamForge account portal using an email address and password,
+        or sign in with an existing Google or Apple identity.</p>
+    </section>
+    <section id="plans-tiers">
+      <title>Plans and tiers</title>
+      <p id="plans-tiers-para">StreamForge products ship in two tiers: <b>Free</b>, which
+        covers core recording, capture, and upload functionality, and <b>Pro</b>, which
+        unlocks multi-camera switching, advanced overlays, team collaboration, and
+        higher cloud storage and transcoding limits. Tier is tied to the account, not the
+        installed application, so signing in unlocks the same tier everywhere.</p>
+    </section>
+    <section id="license-activation">
+      <title>Activating a Pro license</title>
+      <p id="license-activation-para">A Pro license activates automatically the first time
+        you sign in to a Pro-capable product with an account that has an active Pro
+        subscription. No separate license key entry is required.</p>
+    </section>
+  </conbody>
+</concept>

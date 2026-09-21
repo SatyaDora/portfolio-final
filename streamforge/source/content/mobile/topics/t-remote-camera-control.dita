@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="remote-camera-control" otherprops="fa-capture tier-free">
+  <title>Remote Camera Control</title>
+  <shortdesc>Use your phone as a camera source and control it remotely from the touch
+    interface.</shortdesc>
+  <taskbody>
+    <context>
+      <p>Once paired, StreamForge Mobile can act as a wireless camera source, and its
+        touch controls let you adjust the shot without touching the phone itself once
+        it's mounted.</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>On the phone, tap <uicontrol>Start Camera</uicontrol>.</cmd>
+      </step>
+      <step>
+        <cmd>Use the on-screen pinch gesture to zoom, and drag to pan within the sensor's
+          field of view.</cmd>
+      </step>
+      <step importance="optional">
+        <cmd>Tap the focus reticle on a subject to lock focus and exposure to that
+          point.</cmd>
+      </step>
+    </steps>
+    <result>The paired desktop product receives the video feed as a live camera source
+      that updates as you adjust framing from the phone.</result>
+  </taskbody>
+</task>
