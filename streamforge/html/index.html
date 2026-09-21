@@ -1,0 +1,231 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="copyright" content="(C) Copyright 2026">
+      <meta name="generator" content="DITA-OT">
+      <title>StreamForge Creator Suite Documentation</title>
+      <link rel="stylesheet" type="text/css" href="commonltr.css">
+      <link rel="stylesheet" type="text/css" href="streamforge.css">
+      <style type="text/css">/*
+  webhelp-custom.css
+  Publish-time stylesheet for the OBS Studio Quick Start WebHelp/HTML5 output.
+
+  IMPORTANT: The exact class names DITA-OT emits (note types, table classes, etc.)
+  vary slightly by DITA-OT version and which output plugin you use (webhelp-classic,
+  webhelp-responsive, or html5). Before wiring this in, generate the output once,
+  open a topic in the browser, and inspect the actual HTML with devtools to confirm
+  these selectors match. Adjust selector names below as needed -- do not assume.
+*/
+
+:root {
+  --obs-brand-color: #2f5fa8;
+  --obs-brand-color-dark: #1e3f73;
+  --obs-caution-bg: #fdecea;
+  --obs-caution-border: #c0392b;
+  --obs-tip-bg: #eaf4ec;
+  --obs-tip-border: #2e7d47;
+  --obs-code-bg: #f4f4f4;
+  --obs-body-font: "Segoe UI", -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --obs-mono-font: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+body {
+  font-family: var(--obs-body-font);
+  line-height: 1.55;
+  color: #222;
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* Topic titles */
+h1, .title { color: var(--obs-brand-color-dark); }
+h1 { border-bottom: 2px solid var(--obs-brand-color); padding-bottom: 0.3rem; }
+
+/* Short description -- typically rendered as a lead paragraph */
+.shortdesc { font-size: 1.05rem; color: #555; margin-bottom: 1.5rem; }
+
+/* Notes and cautions -- confirm actual class names in generated output first */
+.note { border-left: 4px solid #999; background: #f7f7f7; padding: 0.6rem 1rem; margin: 1rem 0; }
+.note.caution, .cautionNote { border-left-color: var(--obs-caution-border); background: var(--obs-caution-bg); }
+.note.tip, .tipNote { border-left-color: var(--obs-tip-border); background: var(--obs-tip-bg); }
+
+/* UI controls and menu paths */
+.uicontrol { font-weight: 600; }
+.menucascade { font-style: normal; color: var(--obs-brand-color-dark); }
+
+/* Code, filenames, commands */
+.codeph, .filepath, code, pre {
+  font-family: var(--obs-mono-font);
+  background: var(--obs-code-bg);
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+}
+
+/* Steps */
+.steps { counter-reset: obs-step; }
+.step { margin-bottom: 0.9rem; }
+
+/* Reference tables -- verified against real DITA-OT html5 output: table.table, thead.thead, th/td.entry */
+table.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+table.table thead th.entry {
+  background: var(--obs-brand-color);
+  color: #fff;
+  text-align: left;
+  padding: 0.5rem;
+}
+table.table td.entry {
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem;
+  vertical-align: top;
+}
+
+/* Custom outputclass hooks (see task-install.dita, reference-system-requirements.dita) */
+.requirements-list li { margin-bottom: 0.35rem; }
+.callout-box { box-shadow: 0 1px 4px rgba(0,0,0,0.15); }
+
+/* Print: hide navigation chrome, keep only content */
+@media print {
+  nav, .toc, .breadcrumb, .wh_publish_index { display: none !important; }
+  body { max-width: none; padding: 0; }
+}
+
+/* Small-viewport responsiveness */
+@media (max-width: 600px) {
+  body { padding: 1rem; }
+  table.properties, table.reference-properties { font-size: 0.85rem; }
+}
+</style>
+   </head>
+   <body id="streamforge-suite">
+      <h1 class="title topictitle1">StreamForge Creator Suite Documentation</h1>
+      <nav>
+         <ul class="map">
+            <li class="topicref"><a href="content/common/topics/c-notices.html">Notices</a></li>
+            <li class="topicref topichead">OBS Studio
+               <ul>
+                  <li class="topicref"><a href="content/obs/topics/c-interface-overview.html">Interface Overview</a></li>
+                  <li class="topicref"><a href="content/obs/topics/t-installing-obs.html">Installing OBS Studio</a></li>
+                  <li class="topicref"><a href="content/obs/topics/r-system-requirements-obs.html">System Requirements</a></li>
+                  <li class="topicref"><a href="content/obs/topics/c-scenes-and-sources.html">Scenes and Sources</a><ul>
+                        <li class="topicref"><a href="content/obs/topics/t-source-display-capture.html">Adding a Display Capture Source</a></li>
+                        <li class="topicref"><a href="content/obs/topics/t-source-window-capture.html">Adding a Window Capture Source</a></li>
+                        <li class="topicref"><a href="content/obs/topics/t-source-game-capture.html">Adding a Game Capture Source</a></li>
+                     </ul>
+                  </li>
+                  <li class="topicref"><a href="content/obs/topics/c-filters-overview.html">Filters Overview</a><ul>
+                        <li class="topicref"><a href="content/obs/topics/t-filter-chroma-key.html">Applying a Chroma Key Filter</a></li>
+                        <li class="topicref"><a href="content/obs/topics/t-filter-color-correction.html">Applying a Color Correction Filter</a></li>
+                        <li class="topicref"><a href="content/obs/topics/t-filter-noise-suppression.html">Applying a Noise Suppression Filter</a></li>
+                     </ul>
+                  </li>
+                  <li class="topicref"><a href="content/obs/topics/t-recording.html">Recording a Video</a></li>
+                  <li class="topicref"><a href="content/obs/topics/t-streaming-setup.html">Setting Up Streaming</a></li>
+                  <li class="topicref"><a href="content/obs/topics/c-transitions.html">Transitions</a></li>
+                  <li class="topicref"><a href="content/obs/topics/c-studio-mode.html">Studio Mode</a></li>
+                  <li class="topicref"><a href="content/obs/topics/t-virtual-camera.html">Using the Virtual Camera</a></li>
+                  <li class="topicref"><a href="content/obs/topics/r-settings-reference.html">Full Settings Reference</a></li>
+                  <li class="topicref"><a href="content/obs/topics/c-scene-collections-profiles.html">Scene Collections and Profiles</a></li>
+                  <li class="topicref"><a href="content/obs/topics/r-hotkeys.html">Hotkeys</a></li>
+                  <li class="topicref"><a href="content/obs/topics/c-plugins-scripting.html">Plugins and Scripting Overview</a></li>
+                  <li class="topicref">Appendices
+                     <ul>
+                        <li class="topicref"><a href="content/obs/topics/r-appendix-cli-args.html">Appendix: Command-Line Arguments</a></li>
+                        <li class="topicref"><a href="content/obs/topics/r-appendix-file-formats.html">Appendix: Supported File Formats</a></li>
+                     </ul>
+                  </li>
+                  <li class="topicref">Troubleshooting
+                     <ul>
+                        <li class="topicref"><a href="content/obs/topics/ts-troubleshoot-no-audio.html">Troubleshooting: No Audio in Recording</a></li>
+                        <li class="topicref"><a href="content/obs/topics/ts-troubleshoot-dropped-frames.html">Troubleshooting: Dropped Frames</a></li>
+                     </ul>
+                  </li>
+                  <li class="topicref"><a href="content/common/topics/c-support-contact.html">Support and Contact</a></li>
+               </ul>
+            </li>
+            <li class="topicref topichead">StreamForge Capture
+               <ul>
+                  <li class="topicref"><a href="content/capture/topics/t-installing-capture.html">Installing StreamForge Capture</a></li>
+                  <li class="topicref"><a href="content/capture/topics/r-system-requirements-capture.html">System Requirements</a></li>
+                  <li class="topicref"><a href="content/capture/topics/c-scenes-and-sources-capture.html">Scenes and Sources</a></li>
+                  <li class="topicref"><a href="content/capture/topics/t-recording-capture.html">Recording a Video</a></li>
+                  <li class="topicref"><a href="content/capture/topics/t-upgrade-to-studiopro.html">Upgrading to Studio Pro</a></li>
+                  <li class="topicref"><a href="content/common/topics/c-support-contact.html">Support and Contact</a></li>
+               </ul>
+            </li>
+            <li class="topicref topichead">StreamForge Cloud
+               <ul>
+                  <li class="topicref"><a href="content/common/topics/c-account-licensing.html">Account and Licensing</a></li>
+                  <li class="topicref"><a href="content/cloud/topics/r-system-requirements-cloud.html">System Requirements</a></li>
+                  <li class="topicref"><a href="content/cloud/topics/t-uploading-recording.html">Uploading a Recording</a></li>
+                  <li class="topicref"><a href="content/cloud/topics/t-sharing-permissions.html">Sharing and Permissions</a></li>
+                  <li class="topicref"><a href="content/cloud/topics/r-transcoding-settings.html">Transcoding Settings Reference</a></li>
+                  <li class="topicref"><a href="content/common/topics/c-support-contact.html">Support and Contact</a></li>
+               </ul>
+            </li>
+            <li class="topicref topichead">StreamForge Mobile
+               <ul>
+                  <li class="topicref"><a href="content/mobile/topics/t-installing-mobile.html">Installing StreamForge Mobile</a></li>
+                  <li class="topicref"><a href="content/mobile/topics/r-system-requirements-mobile.html">System Requirements</a></li>
+                  <li class="topicref"><a href="content/mobile/topics/t-pairing-desktop.html">Pairing with a Desktop Product</a></li>
+                  <li class="topicref"><a href="content/mobile/topics/t-remote-camera-control.html">Remote Camera Control</a></li>
+                  <li class="topicref"><a href="content/mobile/topics/t-monitoring-live-session.html">Monitoring a Live Session</a></li>
+                  <li class="topicref"><a href="content/common/topics/c-account-licensing.html">Account and Licensing</a></li>
+                  <li class="topicref"><a href="content/common/topics/c-support-contact.html">Support and Contact</a></li>
+               </ul>
+            </li>
+            <li class="topicref topichead">StreamForge Studio Pro
+               <ul>
+                  <li class="topicref"><a href="content/obs/topics/c-interface-overview.html">Interface Overview</a></li>
+                  <li class="topicref"><a href="content/obs/topics/r-system-requirements-obs-1.html">System Requirements</a></li>
+                  <li class="topicref"><a href="content/obs/topics/c-scenes-and-sources-1.html">Scenes and Sources</a><ul>
+                        <li class="topicref"><a href="content/obs/topics/t-source-display-capture.html">Adding a Display Capture Source</a></li>
+                        <li class="topicref"><a href="content/obs/topics/t-source-window-capture.html">Adding a Window Capture Source</a></li>
+                        <li class="topicref"><a href="content/obs/topics/t-source-game-capture.html">Adding a Game Capture Source</a></li>
+                     </ul>
+                  </li>
+                  <li class="topicref"><a href="content/studiopro/topics/t-multicam-switching.html">Multi-Camera Switching</a></li>
+                  <li class="topicref"><a href="content/obs/topics/c-filters-overview.html">Filters Overview</a><ul>
+                        <li class="topicref"><a href="content/obs/topics/t-filter-chroma-key.html">Applying a Chroma Key Filter</a></li>
+                        <li class="topicref"><a href="content/obs/topics/t-filter-color-correction.html">Applying a Color Correction Filter</a></li>
+                        <li class="topicref"><a href="content/obs/topics/t-filter-noise-suppression.html">Applying a Noise Suppression Filter</a></li>
+                     </ul>
+                  </li>
+                  <li class="topicref"><a href="content/studiopro/topics/c-advanced-overlays.html">Advanced Overlays</a></li>
+                  <li class="topicref"><a href="content/obs/topics/t-recording-1.html">Recording a Video</a></li>
+                  <li class="topicref"><a href="content/obs/topics/t-streaming-setup.html">Setting Up Streaming</a></li>
+                  <li class="topicref"><a href="content/obs/topics/c-transitions.html">Transitions</a></li>
+                  <li class="topicref"><a href="content/obs/topics/c-studio-mode.html">Studio Mode</a></li>
+                  <li class="topicref"><a href="content/obs/topics/t-virtual-camera.html">Using the Virtual Camera</a></li>
+                  <li class="topicref"><a href="content/obs/topics/r-settings-reference.html">Full Settings Reference</a></li>
+                  <li class="topicref"><a href="content/obs/topics/c-scene-collections-profiles.html">Scene Collections and Profiles</a></li>
+                  <li class="topicref"><a href="content/obs/topics/r-hotkeys.html">Hotkeys</a></li>
+                  <li class="topicref"><a href="content/obs/topics/c-plugins-scripting.html">Plugins and Scripting Overview</a></li>
+                  <li class="topicref"><a href="content/studiopro/topics/c-team-collaboration.html">Team Collaboration</a></li>
+                  <li class="topicref"><a href="content/common/topics/c-account-licensing.html">Account and Licensing</a></li>
+                  <li class="topicref"><a href="content/studiopro/topics/c-license-activation-studiopro.html">License Activation</a></li>
+                  <li class="topicref">Appendices
+                     <ul>
+                        <li class="topicref"><a href="content/obs/topics/r-appendix-cli-args.html">Appendix: Command-Line Arguments</a></li>
+                        <li class="topicref"><a href="content/obs/topics/r-appendix-file-formats.html">Appendix: Supported File Formats</a></li>
+                     </ul>
+                  </li>
+                  <li class="topicref">Troubleshooting
+                     <ul>
+                        <li class="topicref"><a href="content/obs/topics/ts-troubleshoot-no-audio.html">Troubleshooting: No Audio in Recording</a></li>
+                        <li class="topicref"><a href="content/obs/topics/ts-troubleshoot-dropped-frames.html">Troubleshooting: Dropped Frames</a></li>
+                     </ul>
+                  </li>
+                  <li class="topicref"><a href="content/common/topics/c-support-contact.html">Support and Contact</a></li>
+               </ul>
+            </li>
+         </ul>
+      </nav>
+   </body>
+</html>

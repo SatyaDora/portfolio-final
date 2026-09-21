@@ -1,0 +1,187 @@
+/* StreamForge Creator Suite — brand override for DITA-OT's default HTML5 output.
+   Loaded on top of DITA-OT's own commonltr.css (not a replacement for it), so this
+   file only needs to override what's visually distinctive, not reimplement layout,
+   responsive behavior, or accessibility rules DITA-OT already handles correctly. */
+
+:root {
+  --sf-navy: #0f2540;
+  --sf-blue: #1f6feb;
+  --sf-accent: #ff6b35;
+  --sf-bg: #f7f9fc;
+  --sf-text: #1a1f29;
+}
+
+body {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  color: var(--sf-text);
+  background-color: var(--sf-bg);
+}
+
+/* Top-level document title */
+h1 {
+  color: var(--sf-navy);
+  border-bottom: 3px solid var(--sf-accent);
+  padding-bottom: 0.3em;
+}
+
+h2, h3 {
+  color: var(--sf-navy);
+}
+
+/* Product group headings produced by <topichead> in the master suite map */
+li.topicref.topichead {
+  font-weight: 700;
+  color: var(--sf-navy);
+  margin-top: 0.75em;
+}
+
+/* Links */
+a, a:visited {
+  color: var(--sf-blue);
+}
+a:hover {
+  color: var(--sf-accent);
+}
+
+/* Shortdesc styling — make the one-line topic summary visually distinct */
+.shortdesc {
+  font-style: italic;
+  color: #445;
+  border-left: 3px solid var(--sf-blue);
+  padding-left: 0.75em;
+  margin: 0.75em 0;
+}
+
+/* Notes, cautions, and other admonitions */
+.note, .caution {
+  background-color: #fff4e6;
+  border-left: 4px solid var(--sf-accent);
+  padding: 0.6em 1em;
+  border-radius: 4px;
+}
+
+/* Tables (simpletable output) */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  border: 1px solid #d0d7de;
+  padding: 0.5em 0.75em;
+}
+th {
+  background-color: var(--sf-navy);
+  color: #fff;
+}
+
+/* Related-links block generated from the cross-product reltable */
+nav.related-links {
+  border-top: 1px solid #d0d7de;
+  margin-top: 2em;
+  padding-top: 1em;
+}
+
+/* ======================================================================
+   SKIN LAYER — restructures the look of DITA-OT's fixed HTML5 markup
+   using CSS alone (no template/plugin changes). Builds on the brand
+   colors above rather than replacing them.
+   ====================================================================== */
+
+body {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5em 3em;
+  line-height: 1.6;
+}
+
+/* Hero banner for the suite's front page title, and for each topic's own
+   title — DITA-OT emits both as a plain <h1 class="title topictitle1">
+   with no wrapping container, so the banner look is built entirely from
+   this single element's own background/padding. */
+h1.title.topictitle1 {
+  background: linear-gradient(135deg, var(--sf-navy) 0%, #1a3a5c 100%);
+  color: #fff;
+  margin: 0 -1.5em 1.5em;
+  padding: 1em 1.5em;
+  border-bottom: 4px solid var(--sf-accent);
+  font-size: 1.8em;
+}
+
+/* Front-page navigation: turn the flat nested <ul> into a set of
+   card-style groups instead of a plain bulleted list. */
+nav > ul.map {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav > ul.map > li.topicref.topichead {
+  background: #fff;
+  border-left: 4px solid var(--sf-accent);
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(15, 37, 64, 0.12);
+  margin: 0 0 1em;
+  padding: 0.9em 1.2em;
+}
+nav > ul.map > li.topicref:not(.topichead) {
+  list-style: none;
+  padding: 0.5em 1.2em;
+}
+nav ul.map ul {
+  list-style: none;
+  margin: 0.6em 0 0;
+  padding-left: 0.9em;
+  border-left: 2px solid #e3e8ef;
+}
+nav ul.map ul ul {
+  border-left-color: #eef1f5;
+}
+nav ul.map li {
+  margin: 0.25em 0;
+}
+nav ul.map a {
+  display: inline-block;
+  padding: 0.15em 0.3em;
+  border-radius: 3px;
+  text-decoration: none;
+}
+nav ul.map a:hover {
+  background: #eef4ff;
+  text-decoration: underline;
+}
+
+/* Topic content area: a single, card-like reading surface */
+.body, main > article {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(15, 37, 64, 0.10);
+  padding: 1.5em 2em;
+}
+
+/* Numbered task steps as badge-style circles instead of default browser
+   numbering, for a more deliberate, less "default HTML" feel. */
+ol.steps {
+  list-style: none;
+  padding-left: 0;
+  counter-reset: sf-step;
+}
+ol.steps > li.step {
+  position: relative;
+  padding-left: 2.4em;
+  margin-bottom: 0.9em;
+  counter-increment: sf-step;
+}
+ol.steps > li.step::before {
+  content: counter(sf-step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.7em;
+  height: 1.7em;
+  line-height: 1.7em;
+  text-align: center;
+  border-radius: 50%;
+  background: var(--sf-navy);
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.85em;
+}
